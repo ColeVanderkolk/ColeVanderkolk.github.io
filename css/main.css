@@ -11,8 +11,8 @@ body {
     display: flex;
     justify-content: center;
     align-content: end;
-    margin: 0; /* Remove default margin */
-    height: 100vh; /* Make sure body takes up the full viewport height */
+    margin: 0; 
+    height: 100vh; 
 }
 button{
     font-family: "Rajdhani", sans-serif;
