@@ -1,0 +1,6 @@
+/* styles.css */
+body {
+    background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+}
