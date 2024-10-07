@@ -8,3 +8,10 @@ body {
     background-position: center; 
     background-repeat: no-repeat; 
 }
+button{
+    background-color: transparent;
+    color: aliceblue;
+    border-color: aliceblue;
+    border-style: solid;
+    border-radius: 10px;
+}
