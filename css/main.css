@@ -2,9 +2,9 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh; /* Full height of the viewport */
-    background-image: url('../images/Backround.jpg'); /* Replace with your image path */
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    height: 100vh; 
+    background-image: url('../images/BackroundHome.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
