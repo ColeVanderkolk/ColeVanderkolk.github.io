@@ -1,17 +1,28 @@
 /* styles.css */
+
+
 body {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 700;
     margin: 0;
     padding: 0;
     height: 100vh; 
-    background-image: url('../images/BackroundHome.jpg'); 
+    background-image: url('../images/Backround.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
 }
 button{
     background-color: transparent;
-    color: aliceblue;
-    border-color: aliceblue;
+    color: black;
+    border-color: black;
     border-style: solid;
     border-radius: 10px;
+    /*button color shift time */
+    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+}
+button:hover {
+    background-color: rgb(56, 56, 129); 
+    color: rgb(57, 107, 151);
+    border-color: alicebrgb(57, 107, 151);
 }
