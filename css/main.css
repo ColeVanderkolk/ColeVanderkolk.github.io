@@ -1,5 +1,8 @@
 /* styles.css */
-
+html, body { /* Ensure both html and body take full height */
+    height: 100%; /* This ensures both html and body take full height */
+    margin: 0; /* Remove default margin */
+}
 
 body {
     font-family: "Libre Franklin", sans-serif;
@@ -7,12 +10,17 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh; 
-    /*background-image: url('../images/Backround.jpg'); */
+    background-image: url('../images/Backround.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
     background-color: white;
-    animation: fade-in 3.5s forwards;
+    /*animation: fade 10s forwards; could not get this working will try again html5up*/
+    display: flex;
+    justify-content: center;
+    align-content: end;
+
+
 }
 button{
     background-color: transparent;
@@ -29,22 +37,23 @@ button:hover {
     border-color: rgb(66, 66, 66);
 }
 .HomePage {
-    opacity: 0; /* Initially invisible */
-    transform: translateY(400px); /* Move down */
-    animation: up-animation 2s forwards; /* Animation name, duration, and to keep the final state */
+    opacity: 0; 
+    text-align: center;
+    animation: up-animation 2s forwards; 
+    
 }
 /*lettering in homepage moves up animation because hell yea*/
 @keyframes up-animation {
     0% {
         opacity: 0; /* Start invisible */
-        transform: translateY(400px); /* Start 100px below */
+        transform: translateY(0); /* Start 100px below */
     }
     100% {
         opacity: 1; /* Fully visible */
-        transform: translateY(0); /* Move to original position */
+        transform: translateY(250px); /* Move to original position */
     }
 }
-@keyframes fade-in {
+@keyframes fade {
     0%{
         opacity: 0;
     }
@@ -52,4 +61,44 @@ button:hover {
         opacity: 1;
     }
         
+}
+@keyframes reverse-fade {
+    0%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+        
+}
+
+.popup {
+    display: none;  /*Hidden by default */
+    position: fixed; /* Stay in place */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    animation: fade 0.8s forwards;
+}
+/* Show modal when targeted */
+.popup:target {
+    display: block; /* Show the modal */
+}
+
+/* Modal content */
+.popup-content {
+    background-color: #cef9ff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    width: 30%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+/* Close button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    text-decoration: none;
 }
