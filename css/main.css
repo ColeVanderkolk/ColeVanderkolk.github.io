@@ -7,31 +7,34 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh; 
-    background-image: url('../images/Backround.jpg'); 
+    /*background-image: url('../images/Backround.jpg'); */
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    background-color: white;
+    animation: fade-in 3.5s forwards;
 }
 button{
     background-color: transparent;
-    color: black;
-    border-color: black;
+    color: rgb(66, 66, 66);
+    border-color: rgb(66, 66, 66);
     border-style: solid;
     border-radius: 10px;
     /*button color shift time */
     transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
 }
 button:hover {
-    background-color: rgb(56, 56, 129); 
-    color: rgb(57, 107, 151);
-    border-color: alicebrgb(57, 107, 151);
+    background-color: rgb(66, 66, 66); 
+    color: white;
+    border-color: rgb(66, 66, 66);
 }
-.container {
+.HomePage {
     opacity: 0; /* Initially invisible */
     transform: translateY(400px); /* Move down */
-    animation: slide-up 2s forwards; /* Animation name, duration, and to keep the final state */
+    animation: up-animation 2s forwards; /* Animation name, duration, and to keep the final state */
 }
-@keyframes slide-up {
+/*lettering in homepage moves up animation because hell yea*/
+@keyframes up-animation {
     0% {
         opacity: 0; /* Start invisible */
         transform: translateY(400px); /* Start 100px below */
@@ -40,4 +43,13 @@ button:hover {
         opacity: 1; /* Fully visible */
         transform: translateY(0); /* Move to original position */
     }
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+        
 }
