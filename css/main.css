@@ -3,7 +3,7 @@
 body {
     font-family: "Orbitron", sans-serif;
     font-size: 3em;
-    background-image: url('../images/Backround.jpg');
+    background-image: url('../images/orange.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -11,6 +11,8 @@ body {
     display: flex;
     justify-content: center;
     align-content: end;
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Make sure body takes up the full viewport height */
 }
 button{
     font-family: "Rajdhani", sans-serif;
@@ -81,7 +83,7 @@ button:hover {
 .popup-content {
     font-family: "Orbitron", sans-serif;
     font-size: 0.5em;
-    background-color: #cef9ff;
+    background-color: #ff8d4b;
     margin: 15% auto; 
     padding: 10px; 
     width: 30%; 
