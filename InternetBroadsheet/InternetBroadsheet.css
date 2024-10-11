@@ -30,30 +30,30 @@ body {
     gap: 20px;
 }
 
-.article-link {
+.Articles {
     background-color: #ffffff;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-.article-link h2 {
+.Articles h2 {
     margin: 0;
     font-size: 1.8em;
     font-weight: bold;
 }
 
-.article-link p {
+.Articles p {
     margin: 5px 0;
     font-size: 1em;
     color: #555;
 }
 
-.article-link a {
+.Articles a {
     text-decoration: none;
     color: #007bff;
 }
 
-.article-link a:hover {
+.Articles a:hover {
     text-decoration: underline;
 }
