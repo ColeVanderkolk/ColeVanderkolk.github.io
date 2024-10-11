@@ -97,3 +97,18 @@ button:hover {
     font-size: 28px;
     text-decoration: none;
 }
+@media (max-width: 600px) {
+    body {
+        font-size: 1.5em; /* Reduce font size for mobile */
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .popup-content {
+        width: 90%; /* Make popups wider on mobile */
+        margin: 20% auto; /* Adjust positioning */
+    }
+
+    button {
+        font-size: 0.7em; /* Increase button size for better touch interaction */
+    }
+}
