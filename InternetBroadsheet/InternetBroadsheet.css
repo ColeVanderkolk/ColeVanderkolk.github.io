@@ -35,6 +35,8 @@ body {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    margin: 0 auto;
+    text-align: center; 
 }
 
 .Articles h2 {
@@ -56,4 +58,11 @@ body {
 
 .Articles a:hover {
     text-decoration: underline;
+}
+
+.Articles img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; 
+    margin-bottom: 10px; 
 }
