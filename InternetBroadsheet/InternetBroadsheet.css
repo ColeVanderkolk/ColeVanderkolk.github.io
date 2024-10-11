@@ -25,13 +25,12 @@ body {
 }
 
 .broadsheet-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.column {
-    flex: 1;
+.article-link {
     background-color: #ffffff;
     padding: 15px;
     border: 1px solid #ddd;
