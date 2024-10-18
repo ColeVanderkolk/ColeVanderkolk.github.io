@@ -23,7 +23,7 @@
         <h1><b>Cole Vanderkolk</b></h1><a href="https://colevanderkolk.github.io/index.html"><button> Home </button></a>
         <a href="#CS 202"><button> CS 202 </button></a>
         <a href="#About me"><button> About me </button></a>
-        <a href="#Night mode"><button> Night Mode </button></a>
+        <a href="#Night mode"><button onclick="toggleNightMode()">Night Mode</button></a>
     </div>
     <!--Button one-->
     <div id="CS 202" class="popup">
@@ -67,17 +67,10 @@
 
     <!-- Button three -->
     <div id="Night mode" >
-        <button id="nightModeButton" onclick="toggleNightMode()">Night Mode</button>
-         <!-- Video element -->
-    <video id="sunsetVideo" style="display: none;" muted>
-        <source src="path/to/your/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <!-- Image element for the night scene -->
-    <img id="nightImage" src="path/to/night-image.jpg" style="display: none;" alt="Night Scene">
-        <script src="js/main.js"></script> 
+        <video id="backgroundVideo" src="../images/BackroundVid - Made with Clipchamp (1).mp4" style="display: none;" controls></video>
+        <img id="nighttimeImage" src="../images/NighttimeImage.png" style="display: none;" />
     </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
