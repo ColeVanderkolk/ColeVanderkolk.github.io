@@ -3,7 +3,7 @@
 body {
     font-family: "Orbitron", sans-serif;
     font-size: 3em;
-    background-image: url('../images/orange.jpg');
+    background-image: url('../images/DaytimeImage.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -111,4 +111,5 @@ button:hover {
     button {
         font-size: 0.7em; /* Increase button size for better touch interaction */
     }
+
 }
