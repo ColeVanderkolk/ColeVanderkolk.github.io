@@ -1,7 +1,7 @@
 function toggleNightMode() {
     const themeStylesheet = document.getElementById('themeStylesheet');
     const video = document.getElementById('backgroundVideo');
-    const image = document.getElementById('nighttimeImage');
+    const videoReverse = document.getElementById('backgroundVideoReverse');
 
     if (themeStylesheet.getAttribute('href') === 'css/lightTheme.css') {
         themeStylesheet.setAttribute('href', 'css/darkTheme.css');
@@ -16,7 +16,12 @@ function toggleNightMode() {
     } else {
         themeStylesheet.setAttribute('href', 'css/lightTheme.css');
 
-        // Hide the image when switching back to light mode
-        image.style.display = 'none';
+        // Play the video and show it
+        videoReverse.style.display = 'block'; 
+        videoReverse.play();
+
+        videoReverse.onended = function() {
+            videoReverse.style.display = 'none';
+        };
     }
 }
