@@ -3,20 +3,19 @@ function toggleNightMode() {
     const video = document.getElementById('backgroundVideo');
     const videoReverse = document.getElementById('backgroundVideoReverse');
 
-    if (themeStylesheet.getAttribute('href') === 'css/lightTheme.css') {
+    if (themeStylesheet.getAttribute('href') === 'css/lightTheme.css') { //switch to dark theme
         themeStylesheet.setAttribute('href', 'css/darkTheme.css');
 
-        // Play the video and show it
         video.style.display = 'block'; 
         video.play();
 
         video.onended = function() {
             video.style.display = 'none';
         };
-    } else {
+    } else { //switch to light theme
         themeStylesheet.setAttribute('href', 'css/lightTheme.css');
 
-        // Play the video and show it
+        
         videoReverse.style.display = 'block'; 
         videoReverse.play();
 
@@ -24,4 +23,12 @@ function toggleNightMode() {
             videoReverse.style.display = 'none';
         };
     }
+}
+
+function hideHomepage() {
+    document.getElementById('homepage').style.display = 'none';
+}
+
+function showHomePage() {
+    document.getElementById('homepage').style.display = 'block';
 }

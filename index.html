@@ -23,16 +23,16 @@
 
 <body>
     <!-- Title card with name and buttons, animation for coolfactor :P-->
-    <div class="HomePage">
+    <div id="homepage" class="HomePage">
         <h1><b>Cole Vanderkolk</b></h1><a href="https://colevanderkolk.github.io/index.html"><button> Home </button></a>
-        <a href="#CS 202"><button> CS 202 </button></a>
-        <a href="#About me"><button> About me </button></a>
-        <a href="#Night mode"><button onclick="toggleNightMode()">Night Mode</button></a>
+        <a href="#CS 202"><button onclick="hideHomepage()">CS 202</button></a>
+        <a href="#About me"><button onclick="hideHomepage()">About me</button></a>
+        <a href="#Switch theme"><button onclick="toggleNightMode()">Switch theme</button></a>
     </div>
     <!--Button one-->
     <div id="CS 202" class="popup">
         <div class="popup-content">
-            <a href="#" class="close">&times;</a>
+            <a href="#" class="close" onclick="showHomePage()">&times;</a>
             <h2>CS 202</h2>
             <p>Assignments:
                 <a href="https://colevanderkolk.github.io/index.html#>">1</a>
@@ -63,14 +63,19 @@
     <!--Button two-->
     <div id="About me" class="popup">
         <div class="popup-content">
-            <a href="#" class="close">&times;</a>
+            <a href="#" class="close" onclick="showHomePage()">&times;</a>
             <h2>About me:</h2>
-            <p> I am a current CS undergraduate at WWU!</p>
+            <p> Hello! My name, as stated clearly on the title page, is Cole. I am a current CS undergraduate at WWU, I really enjoy the outdoors, anime, being artistic and hanging out with my family
+                I was born in California but raised in washington and a lifelong dream of mine is to eventually move back because I love the beach and swimming in the warm ocean. 
+                once I graduate I hope to work somewhere I enjoy but my dream job would be working for bethesda on the next Elder Scrolls game because ive grown up with them and enjoy playing them so much.
+
+
+            </p>
         </div>
     </div>
 
     <!-- Button three -->
-    <div id="Night mode">
+    <div id="Switch theme">
         <video id="backgroundVideo" src="../images/BackroundVid - Made with Clipchamp (1).mp4" style="display: none;"
             controls></video>
         <video id="backgroundVideoReverse" src="../images/BackroundVid-MadewithClipchamp1-ezgif.com-reverse-video.mp4" style="display: none;"

@@ -7,13 +7,13 @@ body {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    /*animation: fade 10s forwards; could not get this working will try again html5up*/
     display: flex;
     justify-content: center;
     align-content: end;
     margin: 0; 
     height: 100vh; 
     color: white;
+    overflow: hidden;
 }
 
 .background-container {
@@ -36,15 +36,7 @@ video {
     transform: translate(-50%, -50%);
 }
 
-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the entire background */
-    z-index: 0;
-}
+
 button{
     font-family: "Rajdhani", sans-serif;
     font-size: 0.5em;
@@ -102,7 +94,7 @@ button:hover {
     position: fixed; 
     width: 100%; 
     height: 100%; 
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.705);
     animation: fade 0.8s forwards;
 }
 /* popup click response*/
