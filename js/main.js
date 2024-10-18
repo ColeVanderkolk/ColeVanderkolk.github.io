@@ -1,12 +1,10 @@
 function toggleNightMode() {
-    const video = document.getElementById('backgroundVideo');
-    const image = document.getElementById('nighttimeImage');
+    const themeStylesheet = document.getElementById('themeStylesheet');
 
-    video.style.display = 'block'; 
-    video.play();
-
-    video.onended = function() {
-        video.style.display = 'none';
-        image.style.display = 'block'; 
-    };
+    if (themeStylesheet.getAttribute('href') === 'css/lightTheme.css') {
+        themeStylesheet.setAttribute('href', 'css/darkTheme.css');
+    } else {
+        themeStylesheet.setAttribute('href', 'css/lightTheme.css');
+    }
 }
+

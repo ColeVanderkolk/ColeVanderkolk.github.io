@@ -1,7 +1,6 @@
 
 /*styling for body*/
 body {
-    z-index: 1;
     font-family: "Orbitron", sans-serif;
     font-size: 3em;
     background-image: url('../images/DaytimeImage.png');
@@ -14,6 +13,7 @@ body {
     align-content: end;
     margin: 0; 
     height: 100vh; 
+    color: black;
 }
 
 .background-container {
