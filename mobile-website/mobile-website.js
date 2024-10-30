@@ -27,10 +27,10 @@ function showPosition(position) {
 
 // calculate angle between the two coordinates
 function calculateDirection(userLocation, targetLocation) {
-    const userlat = userLocation.lat;
-    const userlon = userLocation.lng;
-    const locationlat = targetLocation.lat;
-    const locationlong = targetLocation.lng;
+    const userlat = userLocation.lat * (Math.PI / 180);
+    const userlon = userLocation.lng * (Math.PI / 180);
+    const locationlat = targetLocation.lat * (Math.PI / 180);
+    const locationlong = targetLocation.lng * (Math.PI / 180);
 
     const dLon = locationlong - userlon; //comput difference in longitude to decide which way is north
     const y = Math.sin(dLon) * Math.cos(locationlat);
