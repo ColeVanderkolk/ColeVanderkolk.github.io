@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Mobile Website</title>
+    <title>Campus Compass</title>
     
-    <!-- Link to Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrapCSS/bootstrap.min.css"> <!-- Adjust the filename as needed -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrapCSS/bootstrap.min.css">
     
-    <!-- Optionally, link to your custom CSS -->
-    <link rel="stylesheet" href="css/style.css"> <!-- If you have any custom CSS -->
+    <style>
+        /* Custom styles */
+        body {
+            text-align: center;
+            padding: 20px;
+        }
+        #compass {
+            width: 300px;
+            height: 300px;
+            border: 10px solid #007bff;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #needle {
+            width: 5px;
+            height: 150px;
+            background-color: red;
+            position: absolute;
+            bottom: 50%;
+            transform-origin: bottom;
+            transition: transform 0.5s ease;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center text-primary">Welcome to My Mobile Site!</h1>
-        <p class="lead">If this text is centered and blue, Bootstrap is working!</p>
+    <h1>Campus Compass</h1>
+    <div id="compass">
+        <div id="needle"></div> <!-- Compass needle -->
     </div>
-
-    <!-- Link to Bootstrap JavaScript Bundle -->
-    <script src="bootstrapJS/bootstrap.bundle.min.js"></script> <!-- Adjust the filename as needed -->
+    <button class="btn btn-primary" id="findDirection">Find Direction</button>
     
-    <!-- Optionally, link to your custom JavaScript -->
-    <script src="js/script.js"></script> <!-- If you have any custom JavaScript -->
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="mobile-website.js"></script> <!-- Custom JavaScript -->
 </body>
-
 </html>
