@@ -1,13 +1,13 @@
-// Coordinates of the target location (e.g., a building on campus)
-const targetLocation = { lat: 48.732588, lng: -122.486251 }; // Replace with your target coordinates
-//48.732588, -122.486251
-document.getElementById('findDirection').addEventListener('click', getUserLocation);
+//coordinates to small park by strarbucks
+const targetLocation = { lat: 48.733955, lng: -122.486354 };
 
-function getUserLocation() {
-    if (navigator.geolocation) {
+document.getElementById('findDirection').addEventListener('click', getLocation);
+
+function getLocation() {
+    if (navigator.geolocation) { //find geolocation through api if available
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
-        alert("Geolocation is not supported by this browser.");
+        alert("location unavailable");
     }
 }
 
@@ -17,44 +17,44 @@ function showPosition(position) {
         lng: position.coords.longitude,
     };
 
-    // Calculate the angle from the user to the target location
+    // call calculate direction with user location and target location
     const angle = calculateDirection(userLocation, targetLocation);
 
-    // Rotate the needle to point in the correct direction
+    // rotate the needle 
     const needle = document.getElementById('needle');
     needle.style.transform = `rotate(${angle}deg)`;
 }
 
-// Calculate the bearing (angle) between two coordinates
+// calculate angle between the two coordinates
 function calculateDirection(userLocation, targetLocation) {
-    const lat1 = userLocation.lat;
-    const lon1 = userLocation.lng;
-    const lat2 = targetLocation.lat;
-    const lon2 = targetLocation.lng;
+    const userlat = userLocation.lat;
+    const userlon = userLocation.lng;
+    const locationlat = targetLocation.lat;
+    const locationlong = targetLocation.lng;
 
-    const dLon = lon2 - lon1;
-    const y = Math.sin(dLon) * Math.cos(lat2);
-    const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
-    const angle = Math.atan2(y, x) * (180 / Math.PI); // Convert from radians to degrees
+    const dLon = locationlong - userlon; //comput difference in longitude to decide which way is north
+    const y = Math.sin(dLon) * Math.cos(locationlat);
+    const x = Math.cos(userlat) * Math.sin(locationlat) - Math.sin(userlat) * Math.cos(locationlat) * Math.cos(dLon);
+    const angle = Math.atan2(y, x) * (180 / Math.PI); // convert from radians to degrees
 
-    // Adjust angle to be relative to north
+    // adjust angle to be relative to north
     return (angle + 360) % 360; // Normalize to 0-360
 }
 
-// Handle errors in getting location
+// errors 
 function showError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            alert("User denied the request for Geolocation.");
+            alert("permission denied");
             break;
         case error.POSITION_UNAVAILABLE:
-            alert("Location information is unavailable.");
+            alert("position unavailable");
             break;
         case error.TIMEOUT:
-            alert("The request to get user location timed out.");
+            alert("request timeout");
             break;
         case error.UNKNOWN_ERROR:
-            alert("An unknown error occurred.");
+            alert("error");
             break;
     }
 }
