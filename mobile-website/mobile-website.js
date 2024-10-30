@@ -1,6 +1,6 @@
 // Coordinates of the target location (e.g., a building on campus)
-const targetLocation = { lat: 37.3318, lng: -122.0296 }; // Replace with your target coordinates
-
+const targetLocation = { lat: 48.732588, lng: -122.486251 }; // Replace with your target coordinates
+//48.732588, -122.486251
 document.getElementById('findDirection').addEventListener('click', getUserLocation);
 
 function getUserLocation() {
