@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Collection</title>
+    <link id="JSONcollection" rel="collection" href="collection.json">
+    <link id="JSONstylesheet" rel="stylesheet" href="JSONcollection.css">
+</head>
+<body>
+    <h1>Here is my collection of cool frogs and birds</h1>
+
+    
+    <div id="collection">
+        <div id="json-display"></div>
+    </div>
+
+    
+    <script>
+        fetch('collection.json')
+            .then(response => response.json())  
+            .then(data => {
+                
+                const formattedData = JSON.stringify(data, null, 4);
+                document.getElementById('json-display').textContent = formattedData;
+            })
+            .catch(error => {
+                console.error('Error loading the JSON file:', error);
+            });
+    </script>
+</body>
+</html>

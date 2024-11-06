@@ -1,0 +1,12 @@
+body {
+    font: optional;
+    font-size: large;
+    text-align: center;
+}
+#collection {
+    text-align: left;
+    margin: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;  /*respects line breaks apparently making it look nicer*/
+}
+

@@ -1,0 +1,102 @@
+[
+    {
+        "title": "Scarlet Macaw",
+        "description": "A vibrant parrot native to Central and South American rainforests, known for its bright red, yellow, and blue feathers.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Scarlet_macaw"
+    },
+    {
+        "title": "Toucan",
+        "description": "Recognizable by its large, colorful bill, the toucan is a social bird native to tropical forests in Central and South America.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Toucan"
+    },
+    {
+        "title": "Blue-and-yellow Macaw",
+        "description": "A striking parrot species with blue and yellow plumage, often found in forested regions of South America.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Blue-and-yellow_macaw"
+    },
+    {
+        "title": "Keel-billed Toucan",
+        "description": "Known for its large, colorful bill, this toucan species is found in Central and South American tropical forests.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Keel-billed_toucan"
+    },
+    {
+        "title": "African Grey Parrot",
+        "description": "A highly intelligent parrot with exceptional mimicry abilities, native to the rainforests of West and Central Africa.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/African_grey_parrot"
+    },
+    {
+        "title": "Green-winged Macaw",
+        "description": "One of the largest macaw species, this bird is distinguished by its red, green, and blue feathers.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Green-winged_macaw"
+    },
+    {
+        "title": "Resplendent Quetzal",
+        "description": "A vibrantly colored bird with long tail feathers, native to Central America's cloud forests.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Resplendent_quetzal"
+    },
+    {
+        "title": "Greater Bird-of-paradise",
+        "description": "Known for its stunning plumage and elaborate courtship displays, this bird is native to New Guinea's forests.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Greater_bird-of-paradise"
+    },
+    {
+        "title": "Rainbow Lorikeet",
+        "description": "A colorful parrot species with vibrant green, red, blue, and yellow plumage, native to Australia and New Guinea.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Rainbow_lorikeet"
+    },
+    {
+        "title": "Sun Conure",
+        "description": "A small parrot known for its bright yellow and orange feathers, found in the tropical forests of South America.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Sun_conure"
+    },
+    {
+        "title": "Red-eyed Tree Frog",
+        "description": "A small, brightly colored frog with red eyes and blue and yellow side stripes, found in Central American rainforests.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Agalychnis_callidryas"
+    },
+    {
+        "title": "Poison Dart Frog",
+        "description": "A group of brightly colored, highly toxic frogs found in the tropical rainforests of Central and South America.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Poison_dart_frog"
+    },
+    {
+        "title": "Glass Frog",
+        "description": "Known for its translucent skin, this frog allows internal organs to be partially visible, native to Central and South America.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Glass_frog"
+    },
+    {
+        "title": "Amazon Milk Frog",
+        "description": "Named for the milky secretion it produces, this frog is native to the Amazon Rainforest and has a unique blue-grey color.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Trachycephalus_resinifictrix"
+    },
+    {
+        "title": "Golden Poison Frog",
+        "description": "One of the most toxic animals on Earth, this small frog is native to Colombia's Pacific coast.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Golden_poison_frog"
+    },
+    {
+        "title": "Strawberry Poison Dart Frog",
+        "description": "A small, bright red frog found in Central America, it has a variety of color morphs and is mildly toxic.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Strawberry_poison-dart_frog"
+    },
+    {
+        "title": "Blue Poison Dart Frog",
+        "description": "A brightly colored blue frog, native to Suriname and parts of Brazil, known for its skin toxins.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Blue_poison_dart_frog"
+    },
+    {
+        "title": "Waxy Monkey Tree Frog",
+        "description": "An arboreal frog with waxy skin that helps retain moisture, native to South American dry forests.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Waxy_monkey_leaf_frog"
+    },
+    {
+        "title": "Tomato Frog",
+        "description": "A bright red frog native to Madagascar, known for secreting a sticky substance to deter predators.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Tomato_frog"
+    },
+    {
+        "title": "Splendid Leaf Frog",
+        "description": "An arboreal frog with vibrant green and orange markings, found in Central America's rainforests.",
+        "wikipedia_link": "https://en.wikipedia.org/wiki/Cruziohyla_calcarifer"
+    }
+]
