@@ -1,7 +1,14 @@
 body {
     font: optional;
+    color: aliceblue;
     font-size: large;
     text-align: center;
+    background-image: url('../images/natureimage.jpeg');
+    background-size: cover; /* Ensures image covers the whole area */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed;
+ 
 }
 #collection {
     text-align: left;
