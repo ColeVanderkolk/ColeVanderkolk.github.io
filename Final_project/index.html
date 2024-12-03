@@ -1,67 +1,562 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compass</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .compass {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            border: 5px solid #000;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
-        }
-        .compass-circle {
-            position: absolute;
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 2px solid #aaa;
-            transform: translate(-50%, -50%);
-        }
-        .arrow {
-            width: 10px;
-            height: 90px;
-            background-color: red;
-            position: absolute;
-            transform: translate(-50%, -100%);
-        }
-        .start-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .start-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <div class="compass">
-        <div class="arrow"></div>
-        <div class="compass-circle"></div>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://www.onlinecompass.org/xmlrpc.php" />
+<meta name='robots' content='noindex, nofollow' />
+<link rel="alternate" href="https://www.onlinecompass.org/app/" hreflang="en" />
+<link rel="alternate" href="https://www.onlinecompass.org/ar/%d8%a8%d9%88%d8%b5%d9%84%d8%a9/" hreflang="ar" />
+<link rel="alternate" href="https://www.onlinecompass.org/tr/pusula/" hreflang="tr" />
+<link rel="alternate" href="https://www.onlinecompass.org/es/brujula/" hreflang="es" />
+<link rel="alternate" href="https://www.onlinecompass.org/nb/online-kompass/" hreflang="nb" />
+<link rel="alternate" href="https://www.onlinecompass.org/it/bussola-online/" hreflang="it" />
+<link rel="alternate" href="https://www.onlinecompass.org/uk/%d0%ba%d0%be%d0%bc%d0%bf%d0%b0%d1%81/" hreflang="uk" />
+<link rel="alternate" href="https://www.onlinecompass.org/th/%e0%b9%80%e0%b8%82%e0%b9%87%e0%b8%a1%e0%b8%97%e0%b8%b4%e0%b8%a8/" hreflang="th" />
+<link rel="alternate" href="https://www.onlinecompass.org/de/virtueller-kompass/" hreflang="de" />
+<link rel="alternate" href="https://www.onlinecompass.org/fr/boussole/" hreflang="fr" />
+<link rel="alternate" href="https://www.onlinecompass.org/sv/kompass/" hreflang="sv" />
+<link rel="alternate" href="https://www.onlinecompass.org/pl/kompas/" hreflang="pl" />
+<link rel="alternate" href="https://www.onlinecompass.org/vi/la-ban/" hreflang="vi" />
+<link rel="alternate" href="https://www.onlinecompass.org/id/kompas-online/" hreflang="id" />
+<link rel="alternate" href="https://www.onlinecompass.org/da/online-kompas/" hreflang="da" />
+<link rel="alternate" href="https://www.onlinecompass.org/hi/%e0%a4%95%e0%a4%82%e0%a4%aa%e0%a4%be%e0%a4%b8/" hreflang="hi" />
+<link rel="alternate" href="https://www.onlinecompass.org/ja/%e6%96%b9%e4%bd%8d%e7%a3%81%e9%87%9d/" hreflang="ja" />
+<link rel="alternate" href="https://www.onlinecompass.org/ms/kompas-dalam-talian/" hreflang="ms" />
+<link rel="alternate" href="https://www.onlinecompass.org/ko/%eb%82%98%ec%b9%a8%eb%b0%98/" hreflang="ko" />
+<link rel="alternate" href="https://www.onlinecompass.org/nl/virtueel-kompas/" hreflang="nl" />
+<link rel="alternate" href="https://www.onlinecompass.org/zh-hans/%e6%8c%87%e5%8d%97%e9%92%88/" hreflang="zh-HK" />
+<link rel="alternate" href="https://www.onlinecompass.org/pt/bussola/" hreflang="pt" />
+<link rel="alternate" href="https://www.onlinecompass.org/zh/%e6%8c%87%e5%8d%97%e9%92%88-2/" hreflang="zh-CN" />
+<link rel="alternate" href="https://www.onlinecompass.org/ru/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bc%d0%bf%d0%b0%d1%81/" hreflang="ru" />
+
+	
+	<title>Compass</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="ar_AR" />
+	<meta property="og:locale:alternate" content="tr_TR" />
+	<meta property="og:locale:alternate" content="es_ES" />
+	<meta property="og:locale:alternate" content="nb_NO" />
+	<meta property="og:locale:alternate" content="it_IT" />
+	<meta property="og:locale:alternate" content="uk_UA" />
+	<meta property="og:locale:alternate" content="th_TH" />
+	<meta property="og:locale:alternate" content="de_DE" />
+	<meta property="og:locale:alternate" content="fr_FR" />
+	<meta property="og:locale:alternate" content="sv_SE" />
+	<meta property="og:locale:alternate" content="pl_PL" />
+	<meta property="og:locale:alternate" content="vi_VN" />
+	<meta property="og:locale:alternate" content="id_ID" />
+	<meta property="og:locale:alternate" content="da_DK" />
+	<meta property="og:locale:alternate" content="hi_IN" />
+	<meta property="og:locale:alternate" content="ja_JP" />
+	<meta property="og:locale:alternate" content="ms_MY" />
+	<meta property="og:locale:alternate" content="ko_KR" />
+	<meta property="og:locale:alternate" content="nl_NL" />
+	<meta property="og:locale:alternate" content="zh_HK" />
+	<meta property="og:locale:alternate" content="pt_PT" />
+	<meta property="og:locale:alternate" content="zh_CN" />
+	<meta property="og:locale:alternate" content="ru_RU" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Compass" />
+	<meta property="og:description" content="The system will request permissions to access the geolocation services of your mobile device to automatically activate the compass. You just need to accept or confirm those permissions. If the compass doesn&#8217;t work, you can press the &#8220;Activate&#8221; button to use it manually. Remember that the compass is only compatible with mobile devices or smartphones." />
+	<meta property="og:url" content="https://www.onlinecompass.org/app/" />
+	<meta property="og:site_name" content="Compass Online" />
+	<meta property="article:modified_time" content="2024-01-25T15:47:52+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.onlinecompass.org/app/","url":"https://www.onlinecompass.org/app/","name":"Compass","isPartOf":{"@id":"https://www.onlinecompass.org/#website"},"datePublished":"2024-01-24T16:44:16+00:00","dateModified":"2024-01-25T15:47:52+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.onlinecompass.org/app/"]}]},{"@type":"WebSite","@id":"https://www.onlinecompass.org/#website","url":"https://www.onlinecompass.org/","name":"Compass Online","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.onlinecompass.org/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+	
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.onlinecompass.org\/lib\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.onlinecompass.org/lib/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='quads-style-css-css' href='https://www.onlinecompass.org/modules/1626d764f5/includes/gutenberg/dist/blocks.style.build.css' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--main: var(--rehub-main-color);--wp--preset--color--secondary: var(--rehub-sec-color);--wp--preset--color--buttonmain: var(--rehub-main-btn-bg);--wp--preset--color--cyan-grey: #abb8c3;--wp--preset--color--orange-light: #fcb900;--wp--preset--color--red: #cf2e2e;--wp--preset--color--red-bright: #f04057;--wp--preset--color--vivid-green: #00d084;--wp--preset--color--orange: #ff6900;--wp--preset--color--blue: #0693e3;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--system-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--wp--preset--font-family--rh-nav-font: var(--rehub-nav-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif);--wp--preset--font-family--rh-head-font: var(--rehub-head-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif);--wp--preset--font-family--rh-btn-font: var(--rehub-btn-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif);--wp--preset--font-family--rh-body-font: var(--rehub-body-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif);--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 760px;--wp--style--global--wide-size: 900px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:root :where(body){padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){color: var(--rehub-link-color, violet);text-decoration: none;}h1{font-size: 29px;line-height: 34px;margin-top: 10px;margin-bottom: 31px;}h2{font-size: 25px;line-height: 31px;margin-top: 10px;margin-bottom: 31px;}h3{font-size: 20px;line-height: 28px;margin-top: 10px;margin-bottom: 25px;}h4{font-size: 18px;line-height: 24px;margin-top: 10px;margin-bottom: 18px;}h5{font-size: 16px;line-height: 20px;margin-top: 10px;margin-bottom: 15px;}h6{font-size: 14px;line-height: 20px;margin-top: 0px;margin-bottom: 10px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-main-color{color: var(--wp--preset--color--main) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-buttonmain-color{color: var(--wp--preset--color--buttonmain) !important;}.has-cyan-grey-color{color: var(--wp--preset--color--cyan-grey) !important;}.has-orange-light-color{color: var(--wp--preset--color--orange-light) !important;}.has-red-color{color: var(--wp--preset--color--red) !important;}.has-red-bright-color{color: var(--wp--preset--color--red-bright) !important;}.has-vivid-green-color{color: var(--wp--preset--color--vivid-green) !important;}.has-orange-color{color: var(--wp--preset--color--orange) !important;}.has-blue-color{color: var(--wp--preset--color--blue) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-main-background-color{background-color: var(--wp--preset--color--main) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-buttonmain-background-color{background-color: var(--wp--preset--color--buttonmain) !important;}.has-cyan-grey-background-color{background-color: var(--wp--preset--color--cyan-grey) !important;}.has-orange-light-background-color{background-color: var(--wp--preset--color--orange-light) !important;}.has-red-background-color{background-color: var(--wp--preset--color--red) !important;}.has-red-bright-background-color{background-color: var(--wp--preset--color--red-bright) !important;}.has-vivid-green-background-color{background-color: var(--wp--preset--color--vivid-green) !important;}.has-orange-background-color{background-color: var(--wp--preset--color--orange) !important;}.has-blue-background-color{background-color: var(--wp--preset--color--blue) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-main-border-color{border-color: var(--wp--preset--color--main) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-buttonmain-border-color{border-color: var(--wp--preset--color--buttonmain) !important;}.has-cyan-grey-border-color{border-color: var(--wp--preset--color--cyan-grey) !important;}.has-orange-light-border-color{border-color: var(--wp--preset--color--orange-light) !important;}.has-red-border-color{border-color: var(--wp--preset--color--red) !important;}.has-red-bright-border-color{border-color: var(--wp--preset--color--red-bright) !important;}.has-vivid-green-border-color{border-color: var(--wp--preset--color--vivid-green) !important;}.has-orange-border-color{border-color: var(--wp--preset--color--orange) !important;}.has-blue-border-color{border-color: var(--wp--preset--color--blue) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-system-font-font-family{font-family: var(--wp--preset--font-family--system-font) !important;}.has-rh-nav-font-font-family{font-family: var(--wp--preset--font-family--rh-nav-font) !important;}.has-rh-head-font-font-family{font-family: var(--wp--preset--font-family--rh-head-font) !important;}.has-rh-btn-font-font-family{font-family: var(--wp--preset--font-family--rh-btn-font) !important;}.has-rh-body-font-font-family{font-family: var(--wp--preset--font-family--rh-body-font) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+:root :where(.wp-block-post-title){margin-top: 4px;margin-right: 0;margin-bottom: 15px;margin-left: 0;}
+:root :where(.wp-block-image){margin-top: 0px;margin-bottom: 31px;}
+:root :where(.wp-block-media-text){margin-top: 0px;margin-bottom: 31px;}
+:root :where(.wp-block-post-content){font-size: 16px;line-height: 28px;}
+</style>
+<link rel='stylesheet' id='rhstyle-css' href='https://www.onlinecompass.org/views/67b475a9c6/design.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rehubicons-css' href='https://www.onlinecompass.org/views/67b475a9c6/iconstyle.css' type='text/css' media='all' />
+<style id='quads-styles-inline-css' type='text/css'>
+
+    .quads-location ins.adsbygoogle {
+        background: transparent !important;
+    }
+    .quads.quads_ad_container { display: grid; grid-template-columns: auto; grid-gap: 10px; padding: 10px; }
+    .grid_image{animation: fadeIn 0.5s;-webkit-animation: fadeIn 0.5s;-moz-animation: fadeIn 0.5s;
+        -o-animation: fadeIn 0.5s;-ms-animation: fadeIn 0.5s;}
+    .quads-ad-label { font-size: 12px; text-align: center; color: #333;}
+    .quads_click_impression { display: none;}
+</style>
+<script type="text/javascript" src="https://www.onlinecompass.org/lib/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.onlinecompass.org/lib/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<link rel='shortlink' href='https://www.onlinecompass.org/?p=1120' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.onlinecompass.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.onlinecompass.org%2Fapp%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.onlinecompass.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.onlinecompass.org%2Fapp%2F&#038;format=xml" />
+<style>/* CSS added by WP Meta and Date Remover*/.entry-meta {display:none !important;}
+	.home .entry-meta { display: none; }
+	.entry-footer {display:none !important;}
+	.home .entry-footer { display: none; }</style><script>document.cookie = 'quads_browser_width='+screen.width;</script><link rel="preload" href="https://www.onlinecompass.org/views/67b475a9c6/fonts/rhicons.woff2?3oibrk" as="font" type="font/woff2" crossorigin="crossorigin"><style type="text/css"> @media (min-width:1025px){header .logo-section{padding:20px 0;}}nav.top_menu > ul > li > a{padding:11px 15px 15px 15px;font-size:17px}nav.top_menu > ul > li > a{font-size:21px}nav.top_menu > ul > li > a{text-transform:uppercase;}.post,body .post-readopt .post-inner,body .post-readopt:not(.main-side),body .post-readopt .post,.post p{font-size:19px;line-height:31px;}header .main-nav,.main-nav.dark_style,.header_one_row .main-nav{background:none repeat scroll 0 0 #738a1b!important;box-shadow:none;}.main-nav{border-bottom:none;border-top:none;}.dl-menuwrapper .dl-menu{margin:0 !important}.header_top_wrap{background:none repeat scroll 0 0 #738a1b!important;}.header-top,.header_top_wrap{border:none !important}.header_top_wrap .user-ava-intop:after,.header-top .top-nav > ul > li > a,.header-top a.cart-contents,.header_top_wrap .icon-search-onclick:before,.header-top .top-social,.header-top .top-social a{color:#ffffff !important;}.header-top .top-nav li{border:none !important;} .widget .title:after{border-bottom:2px solid #738a1b;}.rehub-main-color-border,nav.top_menu > ul > li.vertical-menu.border-main-color .sub-menu,.rh-main-bg-hover:hover,.wp-block-quote,ul.def_btn_link_tabs li.active a,.wp-block-pullquote{border-color:#738a1b;}.wpsm_promobox.rehub_promobox{border-left-color:#738a1b!important;}.color_link{color:#738a1b !important;}.featured_slider:hover .score,.top_chart_controls .controls:hover,article.post .wpsm_toplist_heading:before{border-color:#738a1b;}.btn_more:hover,.tw-pagination .current{border:1px solid #738a1b;color:#fff}.rehub_woo_review .rehub_woo_tabs_menu li.current{border-top:3px solid #738a1b;}.gallery-pics .gp-overlay{box-shadow:0 0 0 4px #738a1b inset;}.post .rehub_woo_tabs_menu li.current,.woocommerce div.product .woocommerce-tabs ul.tabs li.active{border-top:2px solid #738a1b;}.rething_item a.cat{border-bottom-color:#738a1b}nav.top_menu ul li ul.sub-menu{border-bottom:2px solid #738a1b;}.widget.deal_daywoo,.elementor-widget-wpsm_woofeatured .deal_daywoo{border:3px solid #738a1b;padding:20px;background:#fff;}.deal_daywoo .wpsm-bar-bar{background-color:#738a1b !important} #buddypress div.item-list-tabs ul li.selected a span,#buddypress div.item-list-tabs ul li.current a span,#buddypress div.item-list-tabs ul li a span,.user-profile-div .user-menu-tab > li.active > a,.user-profile-div .user-menu-tab > li.active > a:focus,.user-profile-div .user-menu-tab > li.active > a:hover,.news_in_thumb:hover a.rh-label-string,.news_out_thumb:hover a.rh-label-string,.col-feat-grid:hover a.rh-label-string,.carousel-style-deal .re_carousel .controls,.re_carousel .controls:hover,.openedprevnext .postNavigation .postnavprev,.postNavigation .postnavprev:hover,.top_chart_pagination a.selected,.flex-control-paging li a.flex-active,.flex-control-paging li a:hover,.btn_more:hover,body .tabs-menu li:hover,body .tabs-menu li.current,.featured_slider:hover .score,#bbp_user_edit_submit,.bbp-topic-pagination a,.bbp-topic-pagination a,.custom-checkbox label.checked:after,.slider_post .caption,ul.postpagination li.active a,ul.postpagination li:hover a,ul.postpagination li a:focus,.top_theme h5 strong,.re_carousel .text:after,#topcontrol:hover,.main_slider .flex-overlay:hover a.read-more,.rehub_chimp #mc_embed_signup input#mc-embedded-subscribe,#rank_1.rank_count,#toplistmenu > ul li:before,.rehub_chimp:before,.wpsm-members > strong:first-child,.r_catbox_btn,.wpcf7 .wpcf7-submit,.wpsm_pretty_hover li:hover,.wpsm_pretty_hover li.current,.rehub-main-color-bg,.togglegreedybtn:after,.rh-bg-hover-color:hover a.rh-label-string,.rh-main-bg-hover:hover,.rh_wrapper_video_playlist .rh_video_currently_playing,.rh_wrapper_video_playlist .rh_video_currently_playing.rh_click_video:hover,.rtmedia-list-item .rtmedia-album-media-count,.tw-pagination .current,.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.active,.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li:hover,.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.dokan-common-links a:hover,#ywqa-submit-question,.woocommerce .widget_price_filter .ui-slider .ui-slider-range,.rh-hov-bor-line > a:after,nav.top_menu > ul:not(.off-canvas) > li > a:after,.rh-border-line:after,.wpsm-table.wpsm-table-main-color table tr th,.rh-hov-bg-main-slide:before,.rh-hov-bg-main-slidecol .col_item:before,.mvx-tablink.active::before{background:#738a1b;}@media (max-width:767px){.postNavigation .postnavprev{background:#738a1b;}}.rh-main-bg-hover:hover,.rh-main-bg-hover:hover .whitehovered,.user-profile-div .user-menu-tab > li.active > a{color:#fff !important} a,.carousel-style-deal .deal-item .priced_block .price_count ins,nav.top_menu ul li.menu-item-has-children ul li.menu-item-has-children > a:before,.top_chart_controls .controls:hover,.flexslider .fa-pulse,.footer-bottom .widget .f_menu li a:hover,.comment_form h3 a,.bbp-body li.bbp-forum-info > a:hover,.bbp-body li.bbp-topic-title > a:hover,#subscription-toggle a:before,#favorite-toggle a:before,.aff_offer_links .aff_name a,.rh-deal-price,.commentlist .comment-content small a,.related_articles .title_cat_related a,article em.emph,.campare_table table.one td strong.red,.sidebar .tabs-item .detail p a,.footer-bottom .widget .title span,footer p a,.welcome-frase strong,article.post .wpsm_toplist_heading:before,.post a.color_link,.categoriesbox:hover h3 a:after,.bbp-body li.bbp-forum-info > a,.bbp-body li.bbp-topic-title > a,.widget .title i,.woocommerce-MyAccount-navigation ul li.is-active a,.category-vendormenu li.current a,.deal_daywoo .title,.rehub-main-color,.wpsm_pretty_colored ul li.current a,.wpsm_pretty_colored ul li.current,.rh-heading-hover-color:hover h2 a,.rh-heading-hover-color:hover h3 a,.rh-heading-hover-color:hover h4 a,.rh-heading-hover-color:hover h5 a,.rh-heading-hover-color:hover h3,.rh-heading-hover-color:hover h2,.rh-heading-hover-color:hover h4,.rh-heading-hover-color:hover h5,.rh-heading-hover-color:hover .rh-heading-hover-item a,.rh-heading-icon:before,.widget_layered_nav ul li.chosen a:before,.wp-block-quote.is-style-large p,ul.page-numbers li span.current,ul.page-numbers li a:hover,ul.page-numbers li.active a,.page-link > span:not(.page-link-title),blockquote:not(.wp-block-quote) p,span.re_filtersort_btn:hover,span.active.re_filtersort_btn,.deal_daywoo .price,div.sortingloading:after{color:#738a1b;} .page-link > span:not(.page-link-title),.widget.widget_affegg_widget .title,.widget.top_offers .title,.widget.cegg_widget_products .title,header .header_first_style .search form.search-form [type="submit"],header .header_eight_style .search form.search-form [type="submit"],.filter_home_pick span.active,.filter_home_pick span:hover,.filter_product_pick span.active,.filter_product_pick span:hover,.rh_tab_links a.active,.rh_tab_links a:hover,.wcv-navigation ul.menu li.active,.wcv-navigation ul.menu li:hover a,form.search-form [type="submit"],.rehub-sec-color-bg,input#ywqa-submit-question,input#ywqa-send-answer,.woocommerce button.button.alt,.tabsajax span.active.re_filtersort_btn,.wpsm-table.wpsm-table-sec-color table tr th,.rh-slider-arrow,.rh-hov-bg-sec-slide:before,.rh-hov-bg-sec-slidecol .col_item:before{background:#738a1b !important;color:#fff !important;outline:0}.widget.widget_affegg_widget .title:after,.widget.top_offers .title:after,.widget.cegg_widget_products .title:after{border-top-color:#738a1b !important;}.page-link > span:not(.page-link-title){border:1px solid #738a1b;}.page-link > span:not(.page-link-title),.header_first_style .search form.search-form [type="submit"] i{color:#fff !important;}.rh_tab_links a.active,.rh_tab_links a:hover,.rehub-sec-color-border,nav.top_menu > ul > li.vertical-menu.border-sec-color > .sub-menu,body .rh-slider-thumbs-item--active{border-color:#738a1b}.rh_wrapper_video_playlist .rh_video_currently_playing,.rh_wrapper_video_playlist .rh_video_currently_playing.rh_click_video:hover{background-color:#738a1b;box-shadow:1200px 0 0 #738a1b inset;}.rehub-sec-color{color:#738a1b} .price_count,.rehub_offer_coupon,#buddypress .dir-search input[type=text],.gmw-form-wrapper input[type=text],.gmw-form-wrapper select,.rh_post_layout_big_offer .priced_block .btn_offer_block,#buddypress a.button,.btn_more,#main_header .wpsm-button,#rh-header-cover-image .wpsm-button,#wcvendor_image_bg .wpsm-button,.rate-bar-bar,.rate-bar,.rehub-main-smooth,.re_filter_instore span.re_filtersort_btn:hover,.re_filter_instore span.active.re_filtersort_btn,.head_search .search-form,.head_search form.search-form input[type="text"],form.search-form input[type="text"]{border-radius:100px}.news .priced_block .price_count,.blog_string .priced_block .price_count,.main_slider .price_count{margin-right:5px}.right_aff .priced_block .btn_offer_block,.right_aff .priced_block .price_count{border-radius:0 !important}form.search-form.product-search-form input[type="text"]{border-radius:100px 0 0 100px;}form.search-form [type="submit"]{border-radius:0 100px 100px 0;}.rtl form.search-form.product-search-form input[type="text"]{border-radius:0 100px 100px 0;}.rtl form.search-form [type="submit"]{border-radius:100px 0 0 100px;}.woocommerce .products.grid_woo .product,.rh_offer_list .offer_thumb .deal_img_wrap,.rehub_chimp #mc_embed_signup input.email,#mc_embed_signup input#mc-embedded-subscribe,.grid_onsale,.def_btn,input[type="submit"],input[type="button"],input[type="reset"],.wpsm-button,#buddypress div.item-list-tabs ul li a,#buddypress .standard-form input[type=text],#buddypress .standard-form textarea,.blacklabelprice{border-radius:5px}.news-community,.review-top .overall-score,.rate_bar_wrap,.rh_offer_list,.woo-tax-logo,#buddypress form#whats-new-form,#buddypress div#invite-list,#buddypress #send-reply div.message-box,.rehub-sec-smooth,#wcfm-main-contentainer #wcfm-content,.wcfm_welcomebox_header{border-radius:8px}.review-top .overall-score span.overall-text{border-radius:0 0 8px 8px}.coupon_btn:before{display:none;}#rhSplashSearch form.search-form input[type="text"],#rhSplashSearch form.search-form [type="submit"]{border-radius:0 !important} .woocommerce .woo-button-area .masked_coupon,.woocommerce a.woo_loop_btn,.woocommerce .button.checkout,.woocommerce input.button.alt,.woocommerce a.add_to_cart_button:not(.flat-woo-btn),.woocommerce-page a.add_to_cart_button:not(.flat-woo-btn),.woocommerce .single_add_to_cart_button,.woocommerce div.product form.cart .button,.woocommerce .checkout-button.button,.priced_block .btn_offer_block,.priced_block .button,.rh-deal-compact-btn,input.mdf_button,#buddypress input[type="submit"],#buddypress input[type="button"],#buddypress input[type="reset"],#buddypress button.submit,.wpsm-button.rehub_main_btn,.wcv-grid a.button,input.gmw-submit,#ws-plugin--s2member-profile-submit,#rtmedia_create_new_album,input[type="submit"].dokan-btn-theme,a.dokan-btn-theme,.dokan-btn-theme,#wcfm_membership_container a.wcfm_submit_button,.woocommerce button.button,.rehub-main-btn-bg,.woocommerce #payment #place_order,.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link{background:none #de1414 !important;color:#ffffff !important;fill:#ffffff !important;border:none !important;text-decoration:none !important;outline:0;box-shadow:-1px 6px 19px rgba(222,20,20,0.25) !important;border-radius:100px !important;}.rehub-main-btn-bg > a{color:#ffffff !important;}.woocommerce a.woo_loop_btn:hover,.woocommerce .button.checkout:hover,.woocommerce input.button.alt:hover,.woocommerce a.add_to_cart_button:not(.flat-woo-btn):hover,.woocommerce-page a.add_to_cart_button:not(.flat-woo-btn):hover,.woocommerce a.single_add_to_cart_button:hover,.woocommerce-page a.single_add_to_cart_button:hover,.woocommerce div.product form.cart .button:hover,.woocommerce-page div.product form.cart .button:hover,.woocommerce .checkout-button.button:hover,.priced_block .btn_offer_block:hover,.wpsm-button.rehub_main_btn:hover,#buddypress input[type="submit"]:hover,#buddypress input[type="button"]:hover,#buddypress input[type="reset"]:hover,#buddypress button.submit:hover,.small_post .btn:hover,.ap-pro-form-field-wrapper input[type="submit"]:hover,.wcv-grid a.button:hover,#ws-plugin--s2member-profile-submit:hover,.rething_button .btn_more:hover,#wcfm_membership_container a.wcfm_submit_button:hover,.woocommerce #payment #place_order:hover,.woocommerce button.button:hover,.rehub-main-btn-bg:hover,.rehub-main-btn-bg:hover > a,.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link:hover{background:none #de1414 !important;color:#ffffff !important;border-color:transparent;box-shadow:-1px 6px 13px rgba(222,20,20,0.35) !important;}.rehub_offer_coupon:hover{border:1px dashed #de1414;}.rehub_offer_coupon:hover i.far,.rehub_offer_coupon:hover i.fal,.rehub_offer_coupon:hover i.fas{color:#de1414}.re_thing_btn .rehub_offer_coupon.not_masked_coupon:hover{color:#de1414 !important}.woocommerce a.woo_loop_btn:active,.woocommerce .button.checkout:active,.woocommerce .button.alt:active,.woocommerce a.add_to_cart_button:not(.flat-woo-btn):active,.woocommerce-page a.add_to_cart_button:not(.flat-woo-btn):active,.woocommerce a.single_add_to_cart_button:active,.woocommerce-page a.single_add_to_cart_button:active,.woocommerce div.product form.cart .button:active,.woocommerce-page div.product form.cart .button:active,.woocommerce .checkout-button.button:active,.wpsm-button.rehub_main_btn:active,#buddypress input[type="submit"]:active,#buddypress input[type="button"]:active,#buddypress input[type="reset"]:active,#buddypress button.submit:active,.ap-pro-form-field-wrapper input[type="submit"]:active,.wcv-grid a.button:active,#ws-plugin--s2member-profile-submit:active,.woocommerce #payment #place_order:active,input[type="submit"].dokan-btn-theme:active,a.dokan-btn-theme:active,.dokan-btn-theme:active,.woocommerce button.button:active,.rehub-main-btn-bg:active,.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link:active{background:none #de1414 !important;box-shadow:0 1px 0 #999 !important;top:2px;color:#ffffff !important;}.rehub_btn_color,.rehub_chimp_flat #mc_embed_signup input#mc-embedded-subscribe{background-color:#de1414;border:1px solid #de1414;color:#ffffff;text-shadow:none}.rehub_btn_color:hover{color:#ffffff;background-color:#de1414;border:1px solid #de1414;}.rething_button .btn_more{border:1px solid #de1414;color:#de1414;}.rething_button .priced_block.block_btnblock .price_count{color:#de1414;font-weight:normal;}.widget_merchant_list .buttons_col{background-color:#de1414 !important;}.widget_merchant_list .buttons_col a{color:#ffffff !important;}.rehub-svg-btn-fill svg{fill:#de1414;}.rehub-svg-btn-stroke svg{stroke:#de1414;}@media (max-width:767px){#float-panel-woo-area{border-top:1px solid #de1414}}:root{--rehub-main-color:#738a1b;--rehub-sec-color:#738a1b;--rehub-main-btn-bg:#de1414;--rehub-link-color:#738a1b;}@media screen and (min-width:1140px){.rh-boxed-container .rh-outer-wrap{width:1120px}.rh-container,.content{width:1080px;}.centered-container .vc_col-sm-12 > * > .wpb_wrapper,.vc_section > .vc_row,body .elementor-section.elementor-section-boxed > .elementor-container,.wp-block-cover__inner-container{max-width:1080px}.vc_row.vc_rehub_container > .vc_col-sm-8,.main-side:not(.full_width){width:755px}.vc_row.vc_rehub_container>.vc_col-sm-4,.sidebar,.side-twocol{width:300px}.side-twocol .columns{height:200px}.main_slider.flexslider .slides .slide{height:418px;line-height:418px}.main_slider.flexslider{height:418px}.main-side,.gallery-pics{width:728px;}.main_slider.flexslider{width:calc(100% - 325px);}.main_slider .flex-overlay h2{font-size:36px;line-height:34px}.offer_grid .offer_thumb img,.offer_grid figure img,figure.eq_figure img{height:130px}header .logo{max-width:300px;}.rh_video_playlist_column_full .rh_container_video_playlist{width:320px !important}.rh_video_playlist_column_full .rh_wrapper_player{width:calc(100% - 320px) !important;}.rehub_chimp h3{font-size:20px}.outer_mediad_left{margin-left:-690px !important}.outer_mediad_right{margin-left:570px !important}}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2603775087923329"
+     crossorigin="anonymous"></script><link rel="icon" href="https://www.onlinecompass.org/storage/2024/01/cropped-compass-online-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.onlinecompass.org/storage/2024/01/cropped-compass-online-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.onlinecompass.org/storage/2024/01/cropped-compass-online-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.onlinecompass.org/storage/2024/01/cropped-compass-online-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			header .search {
+	
+	display:none;
+
+}
+
+.sidebar{
+    
+display: none;
+
+}
+
+.main-side:not(.full_width) {
+    width: 100%;
+}
+
+.row_social_inpost{
+	
+	text-align: center;
+	
+}
+
+article p, .post p {
+	  
+	  font-size: large;
+    line-height: 30px;
+    text-align: justify;
+	  color: black;
+	
+}
+
+.page ul:not([class]) li, .post ol:not([class]) li {
+  text-align:justify;
+	font-size: large;
+}
+
+article strong, .page .post strong {
+    font-weight: bold;
+    color: #9b9b9b;
+}
+
+h2,h3{
+   
+	  text-align: left;
+	  color:#E19F33;
+	  font-size: x-large;
+}
+
+h1{
+   
+	  text-align: center;
+	  color:#E19F33;
+	  font-size: xx-large;
+}
+
+.dark_body .main-side .rh-post-wrapper .title h1 {
+    color:#9c9c9c;
+}
+
+article strong, .post strong {
+    font-weight: bold;
+    color:white;
+}
+
+footer#theme_footer.dark_style {
+    background: none #222;
+    text-align: center;
+}
+
+.rh-container {
+  /*background-color: #222222;*/
+}
+.related_title
+{
+	display:none;
+}
+article strong, .post strong {
+    font-weight: bold;
+    color: black;
+}
+
+.rh-flex-justify-center {
+    justify-content: left;
+}
+
+body .font110, .font110 h4 {
+    font-size: 110%;
+    text-align: center;
+		color:#ca212a
+}
+
+.polylang_langswitcher {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.polylang_langswitcher li {
+  float: left;
+}
+.post,.post p {
+
+    text-align: justify;
+}
+
+
+@media only screen and (max-width: 768px) {
+   
+	h2,h3{
+   
+	  text-align:center;
+		color:#E19F33;
+		font-size: x-large;
+		
+	 
+  }
+}		</style>
+		</head>
+<body class="page-template-default page page-id-1120 wp-embed-responsive noinnerpadding">
+
+	               
+
+<div class="rh-outer-wrap">
+    <div id="top_ankor"></div>
+    
+            <header id="main_header" class="dark_style width-100p position-relative">
+            <div class="header_wrap">
+                                                                                    
+<div class="logo_section_wrap hideontablet">
+    <div class="rh-container">
+        <div class="logo-section header_clean_style clearfix pt0 pb0"> 
+                                 
+                                  
+        </div>
     </div>
-    <button class="start-btn">Activate Compass</button>
-    <script src="Final_project.js"></script>
+</div>
+  
+
+<div class="main-nav dark_style">  
+    <div class="rh-container"> 
+	        
+        <nav class="top_menu"><ul id="menu-superior" class="menu"><li id="menu-item-1035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="https://www.onlinecompass.org/">Compass Online</a></li>
+<li id="menu-item-1492" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.onlinecompass.org/blog/">Blog</a></li>
+</ul></nav>        <div class="responsive_nav_wrap rh_mobile_menu">
+            <div id="dl-menu" class="dl-menuwrapper rh-flex-center-align">
+                <button id="dl-trigger" class="dl-trigger" aria-label="Menu">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <line stroke-linecap="round" id="rhlinemenu_1" y2="7" x2="29" y1="7" x1="3"/>
+                            <line stroke-linecap="round" id="rhlinemenu_2" y2="16" x2="18" y1="16" x1="3"/>
+                            <line stroke-linecap="round" id="rhlinemenu_3" y2="25" x2="26" y1="25" x1="3"/>
+                        </g>
+                    </svg>
+                </button>
+                <div id="mobile-menu-icons" class="rh-flex-center-align rh-flex-right-align">
+                    <button class='icon-search-onclick' aria-label='Search'><i class='rhicon rhi-search'></i></button>
+                </div>
+            </div>
+                    </div>
+    </div>
+</div>
+                
+
+            </div>  
+        </header>
+            
+
+<div class="rh-container "> 
+    <div class="rh-content-wrap clearfix ">
+        
+        <div class="main-side page clearfix" id="content">
+            <div class="rh-post-wrapper">
+                <article class="post mb0" id="page-1120">       
+                                                            <div class="title"><h1 class="entry-title">Compass</h1></div>
+                                                            
+
+<div class="quads-location quads-ad1670 " id="quads-ad1670" style="float:none;text-align:center;padding:0px 0 0px 0;" data-lazydelay="3000">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2603775087923329"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2603775087923329"
+     data-ad-slot="1015597899"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</br>
+<div class="compass">
+      <div class="arrow"></div>
+      <div class="compass-circle"></div>
+      <div class="my-point"></div>
+    </div>
+ <br>	
+<center>
+ <button class="start-btn"> Activate Compass</button>
+</center>
+ 
+<script>
+	const compassCircle = document.querySelector(".compass-circle");
+    const myPoint = document.querySelector(".my-point");
+    const startBtn = document.querySelector(".start-btn");
+    const isIOS =
+      navigator.userAgent.match(/(iPod|iPhone|iPad)/) &&
+      navigator.userAgent.match(/AppleWebKit/);
+
+    function init() {
+      startBtn.addEventListener("click", startCompass);
+      navigator.geolocation.getCurrentPosition(locationHandler);
+
+      if (!isIOS) {
+        window.addEventListener("deviceorientationabsolute", handler, true);
+      }
+    }
+
+    function startCompass() {
+      if (isIOS) {
+        DeviceOrientationEvent.requestPermission()
+          .then((response) => {
+            if (response === "granted") {
+              window.addEventListener("deviceorientation", handler, true);
+            } else {
+              alert("has to be allowed!");
+            }
+          })
+          .catch(() => alert("not supported"));
+      }
+    }
+
+    function handler(e) {
+      compass = e.webkitCompassHeading || Math.abs(e.alpha - 360);
+      compassCircle.style.transform = `translate(-50%, -50%) rotate(${-compass}deg)`;
+
+      // ±15 degree
+      if (
+        (pointDegree < Math.abs(compass) &&
+          pointDegree + 15 > Math.abs(compass)) ||
+        pointDegree > Math.abs(compass + 15) ||
+        pointDegree < Math.abs(compass)
+      ) {
+        myPoint.style.opacity = 0;
+      } else if (pointDegree) {
+        myPoint.style.opacity = 1;
+      }
+    }
+
+    let pointDegree;
+
+    function locationHandler(position) {
+      const { latitude, longitude } = position.coords;
+      pointDegree = calcDegreeToPoint(latitude, longitude);
+
+      if (pointDegree < 0) {
+        pointDegree = pointDegree + 360;
+      }
+    }
+
+    function calcDegreeToPoint(latitude, longitude) {
+      // Qibla geolocation
+      const point = {
+        lat: 21.422487,
+        lng: 39.826206
+      };
+
+      const phiK = (point.lat * Math.PI) / 180.0;
+      const lambdaK = (point.lng * Math.PI) / 180.0;
+      const phi = (latitude * Math.PI) / 180.0;
+      const lambda = (longitude * Math.PI) / 180.0;
+      const psi =
+        (180.0 / Math.PI) *
+        Math.atan2(
+          Math.sin(lambdaK - lambda),
+          Math.cos(phi) * Math.tan(phiK) -
+            Math.sin(phi) * Math.cos(lambdaK - lambda)
+        );
+      return Math.round(psi);
+    }
+
+    init();
+	
+</script>
+
+
+
+<br>
+
+
+
+<p>The system will request permissions to access the geolocation services of your mobile device to automatically activate the compass. You just need to accept or confirm those permissions. If the compass doesn&#8217;t work, you can press the &#8220;Activate&#8221; button to use it manually. Remember that the compass is only compatible with mobile devices or smartphones.</p>
+
+<div class="quads-location quads-ad1672 " id="quads-ad1672" style="float:none;text-align:center;padding:0px 0 0px 0;" data-lazydelay="3000">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2603775087923329"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2603775087923329"
+     data-ad-slot="1015597899"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+                                                          
+                </article> 
+            </div>         
+        </div>	
+         
+         
+            
+            <aside class="sidebar">            
+    
+ 			<p>No widgets added</p>
+	        
+</aside>             
+            </div>
+</div>
+     
+
+			
+		
+	 				<div class="footer-bottom dark_style">
+							<style scoped>
+              .footer-bottom.dark_style{background-color: #000000;}
+              .footer-bottom.dark_style .footer_widget { color: #f5f5f5}
+              .footer-bottom.dark_style .footer_widget .title, .footer-bottom.dark_style .footer_widget h2, .footer-bottom.dark_style .footer_widget a, .footer-bottom .footer_widget.dark_style ul li a{color: #f1f1f1;}
+              .footer-bottom.dark_style .footer_widget .widget_categories ul li:before, .footer-bottom.dark_style .footer_widget .widget_archive ul li:before, .footer-bottom.dark_style .footer_widget .widget_nav_menu ul li:before{color:#fff;}
+            </style>						<div class="rh-container clearfix">
+									
+			</div>	
+		</div>
+				<footer id='theme_footer' class="pt20 pb20 dark_style">
+							<style scoped>
+              footer#theme_footer.dark_style { background: none #222; }
+              footer#theme_footer.dark_style div.f_text, footer#theme_footer.dark_style div.f_text a:not(.rehub-main-color) {color: #f1f1f1;}
+            </style>						<div class="rh-container clearfix">
+				<div class="footer_most_bottom mobilecenterdisplay mobilepadding">
+					<div class="f_text font80">
+						<span class="f_text_span"><ul class="polylang_langswitcher"><li>&nbsp;	<li class="lang-item lang-item-9 lang-item-en current-lang lang-item-first"><a  lang="en-US" hreflang="en-US" href="https://www.onlinecompass.org/app/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII=" alt="English" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-12 lang-item-ar"><a  lang="ar" hreflang="ar" href="https://www.onlinecompass.org/ar/%d8%a8%d9%88%d8%b5%d9%84%d8%a9/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAANlBMVEUAYjMTYDs3R0AvV0NObzE3dSoTWzhAZjgyfEY0gl1EcDFqpIhKj28TVzaLs41ol1JSaF1JW1NzUHm9AAAAPUlEQVR4AY2MtQEAMAgE447tv2xKvuQqeEtRcikZ/9p6b9X/Mdfeaw4PnPvehQhNvpcnJYiInIqraqYpyAd1AAFxIEreLQAAAABJRU5ErkJggg==" alt="العربية" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-16 lang-item-tr"><a  lang="tr-TR" hreflang="tr-TR" href="https://www.onlinecompass.org/tr/pusula/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAARVBMVEX+AAD3AADwAAD+fHz9cHH7ZGT9WVn6UFDpAAD9oKD5Q0P5OTn2MzP1Kir7ubr65ub1Gxv69PTzDw/kAAD319ffAAD4iooXHQ3FAAAAYklEQVR4AT3HhW0EQRQD0Oc/KG3/dQYEYTg2O+4IQbTHydWt0fw2Sfz8Fuw51+U3On7a6/pc/as1UZLDyuq13lWOwpdPn3+v7XJiDD3DR1N87Qr5WXX9zyQ9opEIOwkmDgr/ZXASmpFRqe0AAAAASUVORK5CYII=" alt="Türkçe" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-19 lang-item-es"><a  lang="es-ES" hreflang="es-ES" href="https://www.onlinecompass.org/es/brujula/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAflBMVEX/AAD9AAD3AADxAADrAAD/eXn9bGz8YWH8WVn6UVH5SEj5Pz/3NDT0Kir9/QD+/nL+/lT18lDt4Uf6+j/39zD39yf19R3n5wDxflXsZ1Pt4Y3x8zr0wbLs1NXz8xPj4wD37t3jmkvsUU/Bz6nrykm3vJ72IiL0FBTyDAvhAABEt4UZAAAAX0lEQVR4AQXBQUrFQBBAwXqTDkYE94Jb73+qfwVRcYxVQRBRToiUfoaVpGTrtdS9SO0Z9FR9lVy/g5c99+dKl30N5uxPuviexXEc9/msC7TOkd4kHu/Dlh4itCJ8AP4B0w4Qwmm7CFQAAAAASUVORK5CYII=" alt="Español" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-22 lang-item-nb"><a  lang="nb-NO" hreflang="nb-NO" href="https://www.onlinecompass.org/nb/online-kompass/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAS1BMVEXiAAD+/v4EVNHaAQHPAADyeniUuevvamjuXlzqS0jBAAB6puXoPz3lMjDjJyX6+vr19fXm5uZuneJild5QiNkADK/fExG0AADu7u75QkE3AAAAX0lEQVR4AQXBWQoCMRAFwHrpjhsI3v+OfgtmnFgVJHsXBDEdc/UgRJo65mpKZBkAJaIkeDQE0unpSgj26L3u/Ahw9ujvhTPbDZ/HoES44R2p6Xr0Vwlxb4fXr5bTE/wBnWoXiyWjuXcAAAAASUVORK5CYII=" alt="Norsk Bokmål" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-24 lang-item-it"><a  lang="it-IT" hreflang="it-IT" href="https://www.onlinecompass.org/it/bussola-online/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAUVBMVEUAiQAAgADk5OTe3t7vAAB3yXf9/f36+vr5Vlb3RkZjwWNYvVj4+Pj1MzP1KChQuFD1GxviAABHtUf19fXzDw4/sT8AcAA2qzYAWgDLy8vDw8ObXclsAAAAVElEQVR4AQXBSwoCQRQEsNT70CC69P5XdCUMA2ISSAiBWAQScg8bN7GJWxFDrCivwhCLMipGx3LKUOi2HAZluy2HgXprxQGfGL6G63B5MJ5FCD/4A3DaCLvbBle5AAAAAElFTkSuQmCC" alt="Italiano" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-26 lang-item-uk"><a  lang="uk" hreflang="uk" href="https://www.onlinecompass.org/uk/%d0%ba%d0%be%d0%bc%d0%bf%d0%b0%d1%81/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAb1BMVEUAhP8AfP0Ac/oAZ/UAV/B5yv9wxv5iwf1WvP1Ot/gAQOlMt/1Bs/s1rfkpqPdBsfYdovUAkciK0edqwuBautpNtdZAr9IATZr43QD8/GX6+kn5+Tr4+C329iD09BTy8g309DHguQDy8iruzwDnwwAuoRPoAAAASElEQVR4AU3MAQYDQRAF0Ve9WRAQYO5/zUgSDIxf8DQdiGR3I7v0YOLS3ns4PPt8Wq86vn6vVht7NRzG0OHRSpDb8Gt5IvjAHy/kBL+aIRygAAAAAElFTkSuQmCC" alt="Українська" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-28 lang-item-th"><a  lang="th" hreflang="th" href="https://www.onlinecompass.org/th/%e0%b9%80%e0%b8%82%e0%b9%87%e0%b8%a1%e0%b8%97%e0%b8%b4%e0%b8%a8/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAY1BMVEX+AAD2AADuAAD/goH9dnb7bGz5YmL3Vlb+/v74+Pjx8fE/QK+ur96XmdWMjc+Cg8l3d8YAAH1VVrdLTLM1NaotLaUhIqATE5oAACgAAHNoar8AAFrg4ODzSUnyQUHfAADnAABuUDLQAAAAVElEQVR4AQXBQQ6CQAAAsY6LynL04NH/P9AYjAnYBiBEBkKSXysgoGUUInKM5XZeZDeV3tsF2U0l07L2tZtJZDk+w3XDTu41z4DAo0YinqQSvHDCH4P0DbBHDm4aAAAAAElFTkSuQmCC" alt="ไทย" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-31 lang-item-de"><a  lang="de-DE" hreflang="de-DE" href="https://www.onlinecompass.org/de/virtueller-kompass/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAABLElEQVR4AY2QgUZEQRSGz9ydmzbYkBWABBJYABHEFhJ6m0WP0DMEQNIr9AKrN8ne2Tt3Zs7MOdOZmRBEv+v34Tvub9R6fdNlAzU+snSME/wdjbjbbJ6EiEg6BA8102QbjKNpoMzw8v6qD/sOALbbT2MC1NgaAWOKOgxf5czY+4dbAX2G/THzcozLrvPV85IQyqVz0rvg2p9Pei4HjzSsiFbV4JgyhhxCjpGdZ0RhdikLB9/b8Qig7MkpSovR7Cp59q6CazaNFiTt4J82o6uvdMVwTsztKTXZod4jgOJJuqNAjFyGrBR8gM6XwKfIC4KanBSTZ0rClKh08D9DFh3egW7ebH7NcRDQWrz9rM2Ne+mDOXB2mZJ8agL19nwxR2iZXGm1gDbQKhDjd4yHb2oW/KR8xHicAAAAAElFTkSuQmCC" alt="Deutsch" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-33 lang-item-fr"><a  lang="fr-FR" hreflang="fr-FR" href="https://www.onlinecompass.org/fr/boussole/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAbFBMVEVzldTg4ODS0tLxDwDtAwDjAADD0uz39/fy8vL3k4nzgna4yOixwuXu7u7s6+zn5+fyd2rvcGPtZljYAABrjNCpvOHrWkxegsqfs93NAADpUUFRd8THAABBa7wnVbERRKa8vLyxsLCoqKigoKClCvcsAAAAXklEQVR4AS3JxUEAQQAEwZo13Mk/R9w5/7UERJCIGIgj5qfRJZEpPyNfCgJTjMR1eRRnJiExFJz5Mf1PokWr/UztIjRGQ3V486u0HO55m634U6dMcf0RNPfkVCTvKjO16xHA8miowAAAAABJRU5ErkJggg==" alt="Français" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-35 lang-item-sv"><a  lang="sv-SE" hreflang="sv-SE" href="https://www.onlinecompass.org/sv/kompass/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAXVBMVEUAP4H9wAAAKnQAHmsAEF8AB1QAAEd7sct5r8r+5HX943BopcNcnr9Qlrf93VFBjbI2hq0rfqgAADf72UcieqT51jn40i72ziL0yxTmiwD00DQUcKEMaJsAABztngB+lbt6AAAAVklEQVR4AUXHBWEDQABD0fcPhgrmX+KYuW04QXRgzpUi8ZzzbfA5JB9zCDZpTlYNtgtJrQHb+Pv/6/SxqrczvU7nct8I8ve5XnrveXvzJqaW3HDHNfgCGFkLqHdB0OIAAAAASUVORK5CYII=" alt="Svenska" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-37 lang-item-pl"><a  lang="pl-PL" hreflang="pl-PL" href="https://www.onlinecompass.org/pl/kompas/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAPFBMVEX/8fH67Ozz5ubt4OD+/v77+/v39/fo2Nj5AAD+jo79bW36X1/4T0/5QUHhAAD3MzP0Kir2ICDzERHtAACO5h0ZAAAAQUlEQVR4AQXBsRHDMAwAMTzNwvuvm5MVIECIZIEQZ4EQ7AAIGBABegsR+Z7VxChx7hCjhIwYJcTydcgQ1gv8Lhd/58kJTU6WtnIAAAAASUVORK5CYII=" alt="Polski" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-39 lang-item-vi"><a  lang="vi" hreflang="vi" href="https://www.onlinecompass.org/vi/la-ban/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAATlBMVEX+AAD2AADvAQH/eXn+cXL9amr8YmL9Wlr8UlL7TkvoAAD8d0f6Pz/3ODf2Ly/0KSf6R0f6wTv60T31IBz6+jr4+Cv3QybzEhL4bizhAADgATv8AAAAW0lEQVR4AQXBgU3DQBRAMb+7jwKVUPefkQEQTYJqByBENpKUGoZslXoN5LPONH8G9WWZ7pGlOn6XZmaGRce1J/seei4dl+7dPWDqkk7+58e3+igdlySPcYbwBG+lPhCjrtt9EgAAAABJRU5ErkJggg==" alt="Tiếng Việt" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-41 lang-item-id"><a  lang="id-ID" hreflang="id-ID" href="https://www.onlinecompass.org/id/kompas-online/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAARVBMVEXfAgDPAADskYrvh4Dsd27qa2PoYVi9AADmV03kTULiQzfeMyf2vrryq6ftoJvMGA/8/Pz5+fn39/fz8/Pm5ubg4ODt7u3lScs2AAAAR0lEQVR4AQXBsRGDQBAAMe39e0gcuP86CTEgBSAgIwipzYiMdBmJjITNMJJYd58jhBPf+kEiaCARaFIiWEyA58Gf3bJwI3gBwHkHZeHbupcAAAAASUVORK5CYII=" alt="Bahasa Indonesia" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-43 lang-item-da"><a  lang="da-DK" hreflang="da-DK" href="https://www.onlinecompass.org/da/online-kompas/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAPFBMVEXuAAD9/f347OzjAADVAAD3enr3dnX5+Pj0Zmb0XV3zU1PwRkbvOzvrLy/qIiL19fXnEhLJAADl5eXp0NBOrJwwAAAAWklEQVR4AQXBQU7EMAAAMU+arqpFPfD/VyJOKNoUO1DbAT3TSet8hqS/ydRaV0kfA6EkDIU7yegu8MIFxwAvXMAc56G1vnoGPmMiMPj1NrXDbuctHWR//7iBf5T6EpaFWVlxAAAAAElFTkSuQmCC" alt="Dansk" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-45 lang-item-hi"><a  lang="hi-IN" hreflang="hi-IN" href="https://www.onlinecompass.org/hi/%e0%a4%95%e0%a4%82%e0%a4%aa%e0%a4%be%e0%a4%b8/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAjVBMVEX/vwD5tADyqQDrnAD95Hr74XP53mr932D83Vj72k7610P61TT30Cn+7aX954zXzpalrbmiq7bnsgD8/Pz9/v6bq9bIzeT29/f09PXk5ea9wt2Bj8OKn8+ElssAcwCIxIhnsmdfrF9XqFdQpFBEn0Q5mDoAIgAAbwCAv4AAGQAAZQB1uHUAVwAARAAANACRhc+AAAAAVElEQVR4AQXBAU4CQRRAsb6db7Jg9P4XlRAIs7YBRCiDJMlrWIkkW99HqPZD9u+cuTh0naLJBV/1Dg6gZQfmXpQknzluN0oS1qx9Lv5IyhjyE08W/yjQDpdmVRfaAAAAAElFTkSuQmCC" alt="हिन्दी" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-47 lang-item-ja"><a  lang="ja" hreflang="ja" href="https://www.onlinecompass.org/ja/%e6%96%b9%e4%bd%8d%e7%a3%81%e9%87%9d/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAPFBMVEX09PTy8fHy6+vm5+b+/v77+/v29vbf39/5vLz5fHz6qqr6UFD7QUH5NDT3lZXa2tr419f3JibT09P2WloskN4YAAAAVUlEQVR4AQXBQU7FMBBAMb90hCoW3P+csCAKfIodIBIyQJAGmPQTDHgrzca94K/keT/nWOgjmdm4VvIpwy1GXOsZ9ndYYL/Wee3IRI/fr4PQCuPmAv/RTRUh24Q4UgAAAABJRU5ErkJggg==" alt="日本語" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-49 lang-item-ms"><a  lang="ms-MY" hreflang="ms-MY" href="https://www.onlinecompass.org/ms/kompas-dalam-talian/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAilBMVEUAAMYNB5rErh8JBJjJAADZAADRAADy6Jy2sLjh2KOTkNFsbOL78fL57u7r1NSHd0nm3Inz5Xze0oVGRt3jTlXoTEzmQUHiNjmhm7fo23736uz36Ojz5ebjxMT16pZ8esdyb747O9rfQkvjLi64AADrb3PgIiLdFhb34ODnuLjuw8PgrKzapKPYn5/48ErUAAAAdElEQVR4ASyKJYLDAADAkjK38vjmBv9/0vSYGWVAFM8QCXJBk6dSQNB2Z/YU8lhnAXQBGSRxEsdx+mn4vWyWNLpCqkUrRYY0HK8IGEXfUxrWVKuKkFnj9xyEWgTQuDdDfGRhVjsYPzrvgdoRcIXgNiAFFgQA7TwVdsLcLHgAAAAASUVORK5CYII=" alt="Bahasa Melayu" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-51 lang-item-ko"><a  lang="ko-KR" hreflang="ko-KR" href="https://www.onlinecompass.org/ko/%eb%82%98%ec%b9%a8%eb%b0%98/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAh1BMVEXx9/Xt8vLp7+/l6urg5eT+/v7a29vGxsb19fXz8vO8u7zLy8v5+fnr6+qKiop+fX782dlkY2N3d3fZ4d+ur6799vX6kZD7RUX6Pz75eHXo6OjzsrbpOkO2nsRkbb9RasbHeZPS2tirxfAybtqkrdrU1tR6ouZskt1VVVVpaWnI1e3O09Gfn58iHIdTAAAAh0lEQVR4ASXIA3JEARQF0b4PsW0Vs//1xDbGno8+xRZ1KqBKImkEhKThMGBO6rDIsL+opq0G9OZyRkW/PhJ4Yf1tfaKw+BoZvWLQ9mUrmulIHJhg29M9I3IMGJy1lp5ng7ievZDC4Ibt4/vZ2fvLLYkZt/noD8ednx+0+N5nXSYEqzQOYQGYAgnRIeEuj5p0AAAAAElFTkSuQmCC" alt="한국어" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-53 lang-item-nl"><a  lang="nl-NL" hreflang="nl-NL" href="https://www.onlinecompass.org/nl/virtueel-kompas/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAY1BMVEX/AAD8AADzAADqAAD/fYz+dYT6aHr7XG36VGb6R1f4L0H/ECz+mKXw8fH9/f36+vr19vbW1tbS0tIAG493n89cjcZNgsA/eLkzcbUpaLAcYKwAAFEAA4ANU6UAADsAAHgAAGcSgiW+AAAAS0lEQVR4AQXBiQ3CQBAAMc/dConQf688SoIdBIIyQiR9R0tCuM2rNxHpMqsDIWiBEE4NgnBiHhVJcs48P0uSjXsPl4hLmH2EHzb4A7DPDGppZMSwAAAAAElFTkSuQmCC" alt="Nederlands" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-55 lang-item-zh-hans"><a  lang="zh-HK" hreflang="zh-HK" href="https://www.onlinecompass.org/zh-hans/%e6%8c%87%e5%8d%97%e9%92%88/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAS1BMVEXqAADjAADZAAD2e3v0dXXzbGzyYWHxWFjyUlLuSkrQAAD5jY76m5zsPz/qNTXnKir56en6w8PmGxvKAAD5z9D6qqvjDw/32dnCAADqlhvuAAAAYElEQVR4AQXBUU6DUBRAwTm8SwqJ+9+m8cva0uBMgBBkkUiqYSWrkpeNxL6/76w5R/L1WZ9jXoONqvs5fWeyrGWux9i3Na5ji3Ftfv/uIZtG+8/78TxA7Skj4qxwcNrBPxiAEpMq30QZAAAAAElFTkSuQmCC" alt="中文 (香港)" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-57 lang-item-pt"><a  lang="pt-PT" hreflang="pt-PT" href="https://www.onlinecompass.org/pt/bussola/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAABL0lEQVR4AV2RA2yEQRCFNxcnRVw3qG3bthXUbZxaUaOGRVA7ro2wDWoEtW2b9/b2nHx3v943uztDSAwhAQJ86P83keCJw2HcEAJoqLivmJHbnQt+s7OFfMXHMz5DAgBPCKBCUktSRmdK43Dw3Gz451TIc68nPr+7uLzZWr2Zm78bGLxpa797e1+IC0erUeAmL+ol3R8CEE+/qqvDv2BbwjYi6yJR+6Ys5m5zA0C7HbWEIEy/KCpKC8uzQRf5fkivX3zBZIIw/Swvj8cTKthRIbDGDwcYnXRF7avy/KM5q8NZg2cDPWEaYHt8AceFACBsTdui9nmn8VWmpngawN+ngiEVHCocGM5Vpu8G0rUB5iAS0CKAYwCsg/YB1lPWKESBSCAqhMiKwHQueJwI2BeDC83C2lDIxUCuAAAAAElFTkSuQmCC" alt="Português" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-59 lang-item-zh"><a  lang="zh-CN" hreflang="zh-CN" href="https://www.onlinecompass.org/zh/%e6%8c%87%e5%8d%97%e9%92%88-2/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAXVBMVEXUAADlQgDLAADBAADtgXn63Xjypnf1wHHpcG/oZmbmXVzlU1PjS0q1AAD981775VvwnVD2zkvhPz/fNzfdMjHcKyvaJyfsi0baISHYGhqqAADWExPTDQ2jAACfAAApGpDBAAAAWklEQVR4ATXIhQHDQBTDUMll2n/RMiU5/vQsAE4EsPbaKVOU+pXNwc/WKQXeDZMKu+psCXw/Z7efarmENd6GIwGpXhUvM4spxoiEbouRNT7Fmtaq+RG4wAqZZvceD8DeIelqAAAAAElFTkSuQmCC" alt="中文 (中国)" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+	<li class="lang-item lang-item-61 lang-item-ru"><a  lang="ru-RU" hreflang="ru-RU" href="https://www.onlinecompass.org/ru/%d0%be%d0%bd%d0%bb%d0%b0%d0%b9%d0%bd-%d0%ba%d0%be%d0%bc%d0%bf%d0%b0%d1%81/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAdVBMVEX19f/u7vjm5/H+/v75+fng4Ove3ulFRfyysv6cnP6QkPmIiPh/f/YAAOYAAP1ycv5QUP06OvkxMfcoKPcgIPYUFPS0AADdaYzTRG/RPGnOM2LKLFzIIVPCEUZ7AAD0AQH7YGH3ODj0JyfzERDgAAD4TU3pAABIfLuPAAAAT0lEQVR4AQXBAQqDMAAAsZytyHzA/v9LYRS7JIAQMkBb0ATsgLoKInnHvIrHrdRaBzxupTDxuFUifUsp4R3zU4iwzmOyT1ibBtP2u3C+wB+SHBB5JNY7DAAAAABJRU5ErkJggg==" alt="Русский" width="16" height="11" style="width: 16px; height: 11px;" /></a></li>
+&nbsp;</li></ul><br>
+<p>© 2024</p>
+<br></span>
+							
+					</div>		
+				</div>
+			</div>
+		</footer>
+					
+</div>
+<span class="rehub_scroll" id="topcontrol" data-scrollto="#top_ankor"><i class="rhicon rhi-chevron-up"></i></span>
+<script>var zb_same_domain = 1;/*console.log(zb_same_domain);*/</script>       
+
+     
+
+    <div id="rhmobpnlcustom" class="rhhidden"><div id="rhmobtoppnl" style="" class="pr15 pl15 pb15 pt15"></div></div>    
+     
+	<div id="rhslidingMenu">
+		<div id="slide-menu-mobile"></div>
+	</div>
+	<div id="rhSplashSearch">
+		<div class="search-header-contents">
+			<div id="close-src-splash" class="rh-close-btn rh-hovered-scale position-relative text-center cursorpointer rh-circular-hover abdposright rtlposleft mt15 mr20 ml30" style="z-index:999"><span><i class="rhicon rhi-times whitebg roundborder50p rh-shadow4" aria-hidden="true"></i></span></div>
+			<form  role="search" method="get" class="search-form" action="https://www.onlinecompass.org/">
+  	<input type="text" name="s" placeholder="Search"  data-posttype="post">
+  	<input type="hidden" name="post_type" value="post" />  	<button type="submit" class="btnsearch hideonmobile" aria-label="Search"><i class="rhicon rhi-search"></i></button>
+</form>
+  
+		</div>
+	</div>
+
+	<link rel='stylesheet' id='WH_BRUJULA_URL-style-css' href='https://www.onlinecompass.org/modules/4135764dd2//css/brujula-style.css' type='text/css' media='all' />
+<script type="text/javascript" id="custom-script-js-extra">
+/* <![CDATA[ */
+var wpdata = {"object_id":"1120","site_url":"https:\/\/www.onlinecompass.org"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.onlinecompass.org/modules/08f05641fe/assets/js/inspector.js" id="custom-script-js"></script>
+<script type="text/javascript" src="https://www.onlinecompass.org/views/67b475a9c6/js/inview.js" id="rhinview-js"></script>
+<script type="text/javascript" src="https://www.onlinecompass.org/views/67b475a9c6/js/pgwmodal.js" id="rhpgwmodal-js"></script>
+<script type="text/javascript" src="https://www.onlinecompass.org/views/67b475a9c6/js/unveil.js" id="rhunveil-js"></script>
+<script type="text/javascript" src="https://www.onlinecompass.org/views/67b475a9c6/js/hoverintent.js" id="rhhoverintent-js"></script>
+<script type="text/javascript" src="https://www.onlinecompass.org/views/67b475a9c6/js/countdown.js" id="rhcountdown-js"></script>
+<script type="text/javascript" id="rehub-js-extra">
+/* <![CDATA[ */
+var rhscriptvars = {"back":"back","ajax_url":"\/wp-admin\/admin-ajax.php","fin":"That's all","noresults":"No results found","your_rating":"Your Rating:","addedcart":"Added to Cart","nonce":"3d146e177c","hotnonce":"6cd5627e65","wishnonce":"883d7fe870","searchnonce":"6d428de24a","filternonce":"4add39efbe","rating_tabs_id":"88ab2ba932","max_temp":"10","min_temp":"-10","helpnotnonce":"4faccb2132"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.onlinecompass.org/views/67b475a9c6/js/custom.js" id="rehub-js"></script>
+<script type="text/javascript" src="https://www.onlinecompass.org/modules/1626d764f5/assets/js/ads.js" id="quads-ads-js"></script>
+<script type="text/javascript" src="https://www.onlinecompass.org/modules/4135764dd2//js/brujula-js.js" id="WH_BRUJULA_URL_js_j-js"></script>
+<script type="text/javascript">
+(function() {
+				var expirationDate = new Date();
+				expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
+				document.cookie = "pll_language=en; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
+			}());
+
+</script>
 </body>
 </html>
