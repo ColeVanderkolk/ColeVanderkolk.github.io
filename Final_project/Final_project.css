@@ -36,9 +36,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 0.1s ease-out;
-    background: url(../images/compass2.png)
+    background: url(../images/compass3-removebg-preview.png)
       center no-repeat;
     background-size: contain;
+    background-color: transparent;
   }
   
   .compass > .my-point {
