@@ -10,6 +10,7 @@
     height: 320px;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #97d0ff;
     margin: auto;
   }
   
@@ -18,11 +19,11 @@
     width: 0;
     height: 0;
     top: 10px;
-    left: 50%;
+    left: 51%;
     transform: translateX(-50%);
     border-style: solid;
-    border-width: 0px 10px 140px 10px;
-    border-color: transparent transparent #b62c2c transparent;
+    border-width: 0px 18px 140px 18px;
+    border-color: transparent transparent #850000 transparent;
     border-radius: 25%;
     z-index: 1;
   }
@@ -42,14 +43,7 @@
     background-color: transparent;
   }
   
-  .compass > .my-point {
-    opacity: 0;
-    width: 20%;
-    height: 20%;
-    background: #FDD023;
-    border-radius: 50%;
-    transition: opacity 0.5s ease-out;
-  }
+ 
   
   .start-btn {
     background-color: #e1ecf4;
