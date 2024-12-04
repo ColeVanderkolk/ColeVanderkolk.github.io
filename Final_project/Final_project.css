@@ -86,7 +86,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 0.1s ease-out;
-    background: url(../images/AI.jpeg)
+    background: url(../images/compass2.png)
       center no-repeat;
     background-size: contain;
   }
