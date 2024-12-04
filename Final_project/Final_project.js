@@ -3,12 +3,19 @@ const myPoint = document.querySelector(".my-point");
 const startBtn = document.querySelector(".start-btn");
 const timeDisplay = document.querySelector(".time-display");
 const elevationDisplay = document.querySelector(".elevation-display");
+const latInput = document.querySelector("#latitude"); // User input for latitude
+const lngInput = document.querySelector("#longitude"); // User input for longitude
+const updateBtn = document.querySelector(".update-btn"); // Button to update the target location
 const isIOS =
   navigator.userAgent.match(/(iPod|iPhone|iPad)/) &&
   navigator.userAgent.match(/AppleWebKit/);
 
+let pointDegree;
+
 function init() {
   startBtn.addEventListener("click", startCompass);
+  updateBtn.addEventListener("click", updateTargetLocation); // Event to update the target location
+
   navigator.geolocation.getCurrentPosition(locationHandler, locationError);
 
   if (!isIOS) {
@@ -34,10 +41,14 @@ function startCompass() {
 }
 
 function handler(e) {
-  compass = e.webkitCompassHeading || Math.abs(e.alpha - 360);
+  let compass = e.webkitCompassHeading || Math.abs(e.alpha - 360);
+
+  // Apply the calculated degree from the target coordinates
+  compass = (compass + pointDegree) % 360;
+
   compassCircle.style.transform = `translate(-50%, -50%) rotate(${-compass}deg)`;
 
-  // ±15 degree condition
+  // ±15 degree condition to show/hide the point
   if (
     (pointDegree < Math.abs(compass) && pointDegree + 15 > Math.abs(compass)) ||
     pointDegree > Math.abs(compass + 15) ||
@@ -49,18 +60,17 @@ function handler(e) {
   }
 }
 
-let pointDegree;
-
 function locationHandler(position) {
   const { latitude, longitude, altitude } = position.coords;
-  pointDegree = calcDegreeToPoint(latitude, longitude);
 
-  // Update elevation display
+  // Use current location to calculate initial target bearing
   if (altitude !== null) {
     updateElevation(altitude);
   } else {
     updateElevation("Not available");
   }
+
+  pointDegree = calcDegreeToPoint(latitude, longitude);
 
   if (pointDegree < 0) {
     pointDegree = pointDegree + 360;
@@ -73,8 +83,7 @@ function locationError(error) {
 }
 
 function calcDegreeToPoint(latitude, longitude) {
-  // North geolocation (0° longitude, 90° latitude for the North Pole)
-  const point = { lat: 90.0, lng: 0.0 };
+  const point = { lat: parseFloat(latInput.value), lng: parseFloat(lngInput.value) };
 
   const phiK = (point.lat * Math.PI) / 180.0;
   const lambdaK = (point.lng * Math.PI) / 180.0;
@@ -105,6 +114,26 @@ function updateTime() {
 function updateElevation(altitude) {
   // Update elevation display
   elevationDisplay.textContent = `Elevation: ${altitude}`;
+}
+
+// Function to update the target location based on user input
+function updateTargetLocation() {
+  const lat = parseFloat(latInput.value);
+  const lng = parseFloat(lngInput.value);
+
+  if (!lat || !lng) {
+    alert("Please enter valid latitude and longitude values.");
+    return;
+  }
+
+  // Recalculate the degree to the new target location
+  pointDegree = calcDegreeToPoint(lat, lng);
+
+  if (pointDegree < 0) {
+    pointDegree = pointDegree + 360;
+  }
+
+  alert(`Target location updated! Calculated bearing: ${pointDegree}°`);
 }
 
 init();
