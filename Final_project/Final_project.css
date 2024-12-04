@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     height: 100vh;
     background-color: #ddc979;
+    color: #333;
     margin: 0; 
   }
   
@@ -80,8 +81,9 @@ body {
   
   .start-btn:hover,
   .start-btn:focus {
-    background-color: #8cebe3;
-    color: #000;
+    background-color: #39739d;
+    color: #ffffff;
+    border-color: #ffffff;
   }
   
   .start-btn:focus {
@@ -89,8 +91,8 @@ body {
   }
   
   .start-btn:active {
-    background-color: #fff;
-    color: #000;
+    background-color: #e1ecf4;
+    color: #39739d;
     box-shadow: none;
   }
   
