@@ -1,9 +1,10 @@
 # ColeVanderkolk.github.io
 
-This is the webpage that I m mking for my cs 202 and all future purposes!
+Welcome to my personal Website Github Page!
+I hope you enjoy your stay :)
 
-flaticom for emblems
+If you run into any bugs or have reccomendations you can reach me at:
+cole.b.vanderkolk@gmail.com
 
-make it so the starting theme is based on the time of day for the actual day
+Note: I will probably not respond but feedback is always appreciated! 
 
-make it so the day loops entirely through instead of just reversing
