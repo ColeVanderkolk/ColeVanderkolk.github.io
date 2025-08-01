@@ -54,7 +54,7 @@ button:hover {
 }
 .HomePage {
     opacity: 0; 
-    text-align: center;
+    text-align: top;
     animation: up-animation 2s forwards; 
 }
 /*lettering in homepage moves up animation because hell yea*/
@@ -105,7 +105,7 @@ button:hover {
 .popup-content {
     font-family: "Orbitron", sans-serif;
     font-size: 0.5em;
-    background-color: rgb(165, 87, 42);
+    background-color: rgb(253, 206, 178);
     margin: 15% auto; 
     padding: 10px; 
     width: 30%; 
