@@ -1,15 +1,35 @@
+@font-face {
+  font-family: 'ASFont';
+  src: url('Fonts/as.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     font-family: "Orbitron", sans-serif;
-    background-color: midnight; /* wheat */
+    background-color: midnight;
     color: black;
     margin: 0;
     padding: 0;
 }
-.gradient-text {
-  font-family: 'Orbitron', sans-serif; /* Example font */
+
+.Title-card h1{
+  font-family: 'ASFont', 'Orbitron', sans-serif; 
   font-size: 2rem;
   font-weight: bold;
-  background: linear-gradient(to right, #000000, #c0b090, #000000); /* dark → bright → dark */
-  -webkit-background-clip: text;
+  background: linear-gradient(to right, #ffffff, #757575, #292929);
+  background-clip: text;
   color: transparent;
+  margin: 0;
+  padding: 0;
+  -webkit-background-clip: text; /* used for Safari compatibility */
+  -webkit-text-fill-color: transparent;
+}
+.banner {
+  width: 100%;
+  padding: 4x 0;      /* thinner banner */
+  margin-top: 0; /* no margin at the top */
+  text-align: left;
+  background: linear-gradient(to right, #646464, #32353d, #000000);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
