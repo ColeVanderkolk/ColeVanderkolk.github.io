@@ -62,7 +62,7 @@ body {
 
 .Links {
   position: fixed;
-  font-size: 2rem;
+  font-size: clamp(0.5em, 4vw, 2rem); /* scales smoothly */
   left: 0;
   bottom: 0;
   width: 100%;
@@ -122,10 +122,12 @@ body {
 
 .Mission-statement {
   padding-left: 24px;
-  font-size: 2rem;
+font-size: clamp(0.5rem, 4vw, 2rem);
+
 }
 
 .About-me {
   padding-left: 24px;
-  font-size: 1.5rem;
+font-size: clamp(0.5rem, 4vw, 2rem);
+
 }
