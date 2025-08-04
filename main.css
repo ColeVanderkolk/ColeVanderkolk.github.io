@@ -45,7 +45,7 @@ body {
 .banner {
   width: 100%;
   padding: 4x 0;      /* thinner banner */
-  margin-top: 0; /* no margin at the top */
+  margin-top: 0;      /* no margin at the top */
   text-align: left;
   background: linear-gradient(to right, #646464, #32353d, #000000);
   box-shadow: 0 10px 10px rgba(119, 119, 119, 0.1);
@@ -58,6 +58,27 @@ body {
   flex-direction: column;
   align-items: left;
   justify-content: center;
+  color: white;
+}
+
+.Links a,
+.Links a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.Links a:hover {
+  color: #b6b6b6; /* optional: change color on hover */
+}
+
+.Links ul {
+  display: flex;
+  flex-direction: row;
+  gap: 16px; /* space between icons */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
 }
 
 .Hamburger {
@@ -83,3 +104,4 @@ body {
   background-color: white;
   border-radius: 2px;
 }
+
