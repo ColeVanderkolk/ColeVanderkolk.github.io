@@ -7,7 +7,7 @@
 
 body {
     font-family: 'ASFont', 'Orbitron', sans-serif; 
-    background: linear-gradient(to right, #646464, #32353d, #000000);
+    background: linear-gradient(to right, #a1a1a1, #32353d, #000000);
     color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@ body {
 
 .Name h1 {
   font-family: 'ASFont', 'Orbitron', sans-serif; 
-  font-size: 4rem;
+  font-size: clamp(2rem, 8vw, 4rem); /* scales smoothly */
   font-weight: bold;
   background: linear-gradient(to right, #ffffff, #b6b6b6, #747474);
   background-clip: text;
@@ -30,7 +30,7 @@ body {
   margin: 0;
   padding: 0;
   padding-left: 24px;
-  -webkit-background-clip: text; /* used for Safari compatibility */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -55,20 +55,25 @@ body {
   padding: 4x 0;      /* thinner banner */
   margin-top: 0;      /* no margin at the top */
   text-align: left;
-  background: linear-gradient(to right, #646464, #32353d, #000000);
+  background: linear-gradient(to right, #a1a1a1,  #32353d, #000000);
   box-shadow: 0 10px 10px rgba(119, 119, 119, 0.1);
   border-bottom: 1px solid white; /* thin white line at bottom */
 }
 
 .Links {
-  background: linear-gradient(to right, #646464, #32353d, #000000);
-  margin: 0; 
+  position: fixed;
+  font-size: 2rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, #193d8a, #32353d, #000000);
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: left;
   justify-content: center;
   color: white;
-  padding-left: 24px; /* padding for the links section */
+  padding-left: 24px;
+  z-index: 10;
 }
 
 .Links a,
@@ -115,3 +120,12 @@ body {
   border-radius: 2px;
 }
 
+.Mission-statement {
+  padding-left: 24px;
+  font-size: 2rem;
+}
+
+.About-me {
+  padding-left: 24px;
+  font-size: 1.5rem;
+}
