@@ -37,8 +37,17 @@ body {
 
 @media (max-width: 600px) {
   .Name h1 {
-    font-size: 1.2rem; /* shrink font size for mobile */
-    padding-left: 12px; /* optional: reduce left padding */
+    font-size: 1.2rem;
+    padding-left: 12px;
+  }
+  .Hamburger {
+    width: 28px;
+    height: 28px;
+  }
+  .Hamburger .bar {
+    width: 20px;
+    height: 3px;
+    margin: 2px 0;
   }
 }
 
@@ -101,7 +110,7 @@ body {
   width: 28px;
   height: 4px;
   margin: 3px 0;
-  background-color: white;
+  background-color: rgb(180, 180, 180);
   border-radius: 2px;
 }
 
