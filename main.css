@@ -30,6 +30,7 @@ body {
   color: transparent;
   margin: 0;
   padding: 0;
+  padding-left: 24px;
   -webkit-background-clip: text; /* used for Safari compatibility */
   -webkit-text-fill-color: transparent;
 }
@@ -54,19 +55,26 @@ body {
 }
 
 .Hamburger {
-  font-family: 'ASFont', 'Orbitron', sans-serif; 
-  background-color: transparent;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
   border: none;
-  color: white;
-  font-size: 1.5rem;
   cursor: pointer;
-  background: linear-gradient(to right, #646464, #32353d, #000000);
-  background-size: 200% 100%;
-  background-position: left;
-  transition: background-position 0.4s;
+  position: relative;
+  top: -5px; /* move up slightly */
 }
 
-.Hamburger:hover {
-  background-position: right;
-  box-shadow: 0 10px 10px rgba(119, 119, 119, 0.1);
+.Hamburger .bar {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 3px 0;
+  background-color: white;
+  border-radius: 2px;
+  transition: background 1s;
 }
