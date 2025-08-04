@@ -35,6 +35,12 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 600px) {
+  .Name h1 {
+    font-size: 1.2rem; /* shrink font size for mobile */
+    padding-left: 12px; /* optional: reduce left padding */
+  }
+}
 
 .banner {
   width: 100%;
@@ -76,5 +82,4 @@ body {
   margin: 3px 0;
   background-color: white;
   border-radius: 2px;
-  transition: background 1s;
 }
