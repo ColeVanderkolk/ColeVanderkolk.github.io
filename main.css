@@ -6,11 +6,11 @@
 }
 
 body {
-    font-family: 'ASFont', 'Orbitron', sans-serif; 
-    background: linear-gradient(to right, #a1a1a1, #32353d, #000000);
-    color: rgb(255, 255, 255);
-    margin: 0;
-    padding: 0;
+  font-family: 'ASFont', 'Orbitron', sans-serif; 
+  background: linear-gradient(to right, #a1a1a1, #32353d, #000000);
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .Name {
@@ -22,9 +22,9 @@ body {
 
 .Name h1 {
   font-family: 'ASFont', 'Orbitron', sans-serif; 
-  font-size: clamp(2rem, 4vw, 4rem); /* scales smoothly */
+  font-size: clamp(2rem, 4vw, 4rem);
   font-weight: bold;
-  background: linear-gradient(to right, #ffffff, #b6b6b6, #747474);
+  background: black;
   background-clip: text;
   color: transparent;
   margin: 0;
@@ -50,19 +50,28 @@ body {
   }
 }
 
+/* ---- video banner ---- */
 .banner {
-  width: 100%;
-  padding: 4x 0;      /* thinner banner */
-  margin-top: 0;      /* no margin at the top */
-  text-align: left;
-  background: linear-gradient(to right, #a1a1a1,  #32353d, #000000);
-  box-shadow: 0 10px 10px rgba(119, 119, 119, 0.1);
-  border-bottom: 1px solid white; /* thin white line at bottom */
+  position: relative;
+  width: auto; /* shrink to content */
+  height: auto;
+  padding: 8px; /* optional spacing around it */
+  background-color: #cfcece;
+  align-items: flex-start;
 }
 
+.banner-video {
+  width: 500px;      /* adjust to desired small size */
+  height: auto;      /* preserves aspect ratio */
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+
+/* keep existing link/footer area */
 .Links {
   position: fixed;
-  font-size: clamp(0.5rem, 4vw, 2rem); /* scales smoothly */
+  font-size: clamp(0.5rem, 4vw, 2rem);
   left: 0;
   bottom: 0;
   width: 100%;
@@ -83,13 +92,13 @@ body {
 }
 
 .Links a:hover {
-  color: #b6b6b6; /* optional: change color on hover */
+  color: #b6b6b6;
 }
 
 .Links ul {
   display: flex;
   flex-direction: row;
-  gap: 16px; /* space between icons */
+  gap: 16px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -108,7 +117,8 @@ body {
   border: none;
   cursor: pointer;
   position: relative;
-  top: -5px; /* move up slightly */
+  top: -5px;
+  z-index: 3;
 }
 
 .Hamburger .bar {
@@ -122,12 +132,10 @@ body {
 
 .Mission-statement {
   padding-left: 24px;
-font-size: clamp(0.5rem, 4vw, 2rem);
-
+  font-size: clamp(0.5rem, 4vw, 2rem);
 }
 
 .About-me {
   padding-left: 24px;
-font-size: clamp(0.5rem, 4vw, 2rem);
-
+  font-size: clamp(0.5rem, 4vw, 2rem);
 }
