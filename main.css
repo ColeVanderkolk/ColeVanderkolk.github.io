@@ -61,7 +61,7 @@ body {
 }
 
 .banner-video {
-  width: clamp(200px, 80vw, 600px); /* min 200px, scales up to 80% of viewport, max 500px */
+  width: clamp(100px, 80vw, 600px); /* min 200px, scales up to 80% of viewport, max 500px */
   height: auto;
   object-fit: contain;
   display: block;
