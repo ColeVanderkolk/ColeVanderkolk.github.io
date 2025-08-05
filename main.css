@@ -61,15 +61,16 @@ body {
 }
 
 .banner-video {
-  width: 500px;
+  width: clamp(200px, 80vw, 600px); /* min 200px, scales up to 80% of viewport, max 500px */
   height: auto;
   object-fit: contain;
   display: block;
   border: none;
   outline: none;
-  border-radius: 6px; /* inner radius */
+  border-radius: 6px;
   background: inherit;
 }
+
 
 /* keep existing link/footer area */
 .Links {
