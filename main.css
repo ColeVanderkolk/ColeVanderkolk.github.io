@@ -13,59 +13,37 @@ body {
   padding: 0;
 }
 
-.Name {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.Name h1 {
-  font-family: 'ASFont', 'Orbitron', sans-serif; 
-  font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: bold;
-  background: black;
-  background-clip: text;
-  color: transparent;
-  margin: 0;
-  padding: 0;
-  padding-left: 24px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.main-content {
+  padding-top: 30px; /* height of ticker to push content down */
 }
 
 /* ---- video banner ---- */
 .banner {
-  position: relative;
-  width: auto; /* shrink to content */
-  height: auto;
   padding: 8px; /* optional spacing around it */
-  background-color: #cccccc;
   background-image: url('Images/BannerImage.jpg'); /* path to your image */
-  align-items: flex-start;
+  display: flex;
+  border-bottom: #ffffff solid 2px; /* border around the video */
 }
 
 .banner-video {
   width: clamp(100px, 80vw, 600px); /* min 200px, scales up to 80% of viewport, max 500px */
   height: auto;
-  object-fit: contain;
-  display: block;
-  border: none;
-  outline: none;
-  border-radius: 6px;
-  background: inherit;
+  margin: 0 auto; /* center horizontally */
+  border-radius: 10px;
+  position: center;
 }
 
-.video {
-  width: clamp(100px, 80vw, 600px); /* min 200px, scales up to 80% of viewport, max 500px */
-  height: auto;
-  object-fit: contain;
+.onopen-video {
+  width: 100vw;       /* always stretch to full screen width */
+  height: 300px;      /* or whatever fixed height you want */
+  object-fit: cover;   /* force stretch to fill dimensions */
   display: block;
   border: none;
   outline: none;
-  border-radius: 6px;
   background: inherit;
+  border-bottom: #ffffff solid 2px; /* border around the video */
 }
+
 
 /* keep existing link/footer area */
 .Links {
@@ -111,3 +89,28 @@ body {
   padding-left: 24px;
   font-size: clamp(0.5rem, 4vw, 2rem);
 }
+
+.ticker {
+  height: 30px;
+  background: #ffffff;
+  position: fixed;
+  color: #222;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.ticker-content {
+  white-space: nowrap;
+  animation: scrollTicker 15s linear infinite;
+}
+
+.ticker-content span {
+  padding-right: 2rem; /* spacing between repeats */
+}
+
+@keyframes scrollTicker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
