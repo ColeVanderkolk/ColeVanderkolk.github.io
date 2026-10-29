@@ -5,3 +5,5 @@ I hope you enjoy your stay :)
 
 If you run into any bugs or have reccomendations you can reach me at:
 cole.b.vanderkolk@gmail.com
+
+Heavy inspiration from Bruno simon
