@@ -81,11 +81,12 @@ export default function TempLanding() {
             <h2>Goals</h2>
             <h3>Short Term (1-2 years)</h3>
             <ul> 
-                <li> - Learn piano </li>
-                <li> - Write one book. </li>
-                <li> - Fully build and deploy one mobile game</li>
-                <li> - Begin professional career in the software development industry by Jan 2027 </li>
-                <li> - Work on physical health: Min of 3 weightlifting sessions a week. Run a sub 25 minute 5k. Prioritize meal planning. </li>
+                <li> Learn piano </li>
+                <li> Write one book. </li>
+                <li> Fully build and deploy one mobile game</li>
+                <li> Begin professional career in the software development industry by Jan 2027 </li>
+                <li> Work on physical health: Min of 3 weightlifting sessions a week. Run a sub 25 minute 5k. Prioritize meal planning. </li>
+                <li> Buy a new car </li>
             </ul>
             <h4>Long Term (5-10 years)</h4>
             <ul>
@@ -100,9 +101,9 @@ export default function TempLanding() {
           <div className="temp-section-card">
             <h2>Current Projects</h2>
             <ul>
-                <li>The Abandoned station: Progress 12,000/90,000 (2000 words per week)</li>
-                <li>Critters of Yggdrasil: Publish date goal Jan 2027. Current production phase: Design & style</li>
-                <li>Personal website: Working on creating three JS environment (What you're seeing right now is temporary!)</li>
+                <li> The Abandoned station: Progress 12,000/90,000 (2000 words per week)</li>
+                <li> Critters of Yggdrasil: Publish date goal Jan 2027. Current production phase: Design & style</li>
+                <li> Personal website: Working on creating three JS environment (What you're seeing right now is temporary!)</li>
             </ul>
           </div>
         </section>
