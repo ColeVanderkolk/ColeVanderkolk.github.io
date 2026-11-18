@@ -1,18 +1,13 @@
-//This is where you import things from other files, specifically where you import other pages, like login, profile, etc. 
 import { Routes, Route } from 'react-router-dom';
-import homepage from '../../pages/homeage';
-import PageNotFound from '../../pages/PageNotFound';
-
-import './App.css';
+import HomePage from '../../Pages/homepage';
+import './app.css';
 
 export default function App() {
   return (
     <div className="App">
-      <h1> Hello world </h1> 
-      <Navigation />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="/" element={<TempLanding />} />
+        <Route path="/3d-dev" element={<HomePage />} />
       </Routes>
      </div>
   );
