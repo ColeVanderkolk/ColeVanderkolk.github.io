@@ -111,7 +111,9 @@ export default function TempLanding() {
         <section id="experience" className="temp-content-section fade-section">
           <div className="temp-section-card">
             <h2>Experience</h2>
-            <p>Add your Experience details here.</p>
+            <ul>
+                <li> Nexus games labs summer 2026 game development internship: During this internship I worked and led a team of 5 in creating a online game playable through the browser</li>
+            </ul>
           </div>
         </section>
       </main>
