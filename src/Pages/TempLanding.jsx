@@ -62,7 +62,7 @@ export default function TempLanding() {
         <video autoPlay muted loop playsInline className="temp-hero-video" src="" />
         <div className="temp-video-overlay">
           <h1>Cole Vanderkolk</h1>
-          <p>Scroll down to explore</p>
+          <p>Welcome to my portfolio!</p>
         </div>
       </section>
 
@@ -71,14 +71,23 @@ export default function TempLanding() {
         <section id="about" className="temp-content-section fade-section">
           <div className="temp-section-card">
             <h2>About Me</h2>
-            <p>Add your About Me details here.</p>
+            <p>I am a Computer science gradute from Western Washington university as of June 2026. <br />
+                With a love of the outdoors, art and world creation, and a drive to live a life worth remembering! </p>
           </div>
         </section>
 
         <section id="goals" className="temp-content-section fade-section">
           <div className="temp-section-card">
             <h2>Goals</h2>
-            <p>Add your Goals details here.</p>
+            <h3>Short Term (1-2 years)</h3>
+            <ul> 
+                <li> - Learn piano and be able to play basic sheet music (at least 10 min a day) </li>
+                <li> - Write one 90,000 min word book, currently working on: The Abandoned station Progress 12,000/90,000 (2000 words per week) </li>
+                <li> - Build one mobile game and have it deployed onto the appstore/playstore by Jan 2027. Current production phase: Design & style </li>
+                <li> - Begin professional career in the software development industry by Jan 2027 </li>
+                <li> - Work on physical health: Min of 3 weightlifting sessions a week. Run a sub 25 minute 5k. Prioritize meal planning. </li>
+            </ul>
+            <h3>Long Term (5-10 years)</h3>
           </div>
         </section>
 
