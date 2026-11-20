@@ -27,13 +27,13 @@ function Scene() {
 
         //Geometry
         const cubeGeometry = new THREE.BoxGeometry(1,1,1); //initialize the geometry (shape of object)
-        const cubeMaterial = new THREE.MeshStandardMaterial({ color: rgb(45, 178, 208) }); //Initialize the material (give it color)
+        const cubeMaterial = new THREE.MeshStandardMaterial({ color: 'rgb(45, 178, 208)' }); //Initialize the material (give it color)
         const cube = new THREE.Mesh(cubeGeometry, cubeMaterial); //create a object assigning it the values of geometry and material
         myScene.add(cube);
 
         //Ground mesh
         const groundGeometry = new THREE.PlaneGeometry(10, 10);
-        const groundMaterial = new THREE.MeshStandardMaterial({ color: rgb(109, 34, 39) })
+        const groundMaterial = new THREE.MeshStandardMaterial({ color: 'rgb(109, 34, 39)' });
         const ground = new THREE.Mesh(groundGeometry, groundMaterial);
         ground.rotation.x = (Math.PI / 2);
         myScene.add(ground);

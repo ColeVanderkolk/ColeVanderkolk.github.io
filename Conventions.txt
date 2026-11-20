@@ -1,0 +1,52 @@
+================================================================================
+REACT & JAVASCRIPT FILE NAMING CONVENTIONS
+================================================================================
+
+1. REACT COMPONENTS
+   - Convention : PascalCase
+   - Examples   : HomePage.jsx, Scene.jsx, NavBar.tsx
+   - Why        : Matches the component name inside the file (e.g., 
+                  function HomePage()), which React requires to be capitalized.
+
+--------------------------------------------------------------------------------
+
+2. COMPONENT STYLESHEETS
+   - Convention : PascalCase (matching) or kebab-case
+   - Examples   : HomePage.css, HomePage.module.css, home-page.css
+   - Why        : Matching the exact component name (HomePage.css) makes them 
+                  sit right next to each other in your file explorer.
+
+--------------------------------------------------------------------------------
+
+3. GLOBAL STYLESHEETS
+   - Convention : kebab-case or lowercase
+   - Examples   : index.css, global.css, reset-styles.css
+   - Why        : Clearly distinguishes app-wide styles from single-component 
+                  styles.
+
+--------------------------------------------------------------------------------
+
+4. HOOKS
+   - Convention : camelCase (starting with "use")
+   - Examples   : useScrollPosition.js, useWindowSize.ts
+   - Why        : Follows React's built-in hook naming rule (useState, 
+                  useEffect).
+
+--------------------------------------------------------------------------------
+
+5. HELPER / UTILITY FUNCTIONS
+   - Convention : camelCase or kebab-case
+   - Examples   : scrollToSection.js, format-date.js
+   - Why        : Signals that the file exports plain JavaScript functions or 
+                  data rather than a UI component.
+
+--------------------------------------------------------------------------------
+
+6. FOLDERS
+   - Convention : kebab-case or lowercase
+   - Examples   : components/, three-d-scene/, assets/
+   - Why        : Avoids casing bugs across different operating systems 
+                  (macOS/Windows are case-insensitive, while Linux servers 
+                  are strict).
+
+================================================================================

@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TempLanding.css';
 
 export default function TempLanding() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const sections = document.querySelectorAll('.fade-section');
 
@@ -52,6 +55,9 @@ export default function TempLanding() {
           </button>
           <button onClick={() => scrollToSection('experience')} className="temp-nav-btn">
             Experience
+          </button>
+          <button onClick={() => navigate('/3d-dev')} className="temp-nav-btn">
+            3D homepage under development         
           </button>
         </nav>
       </header>
