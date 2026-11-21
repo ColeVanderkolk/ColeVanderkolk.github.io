@@ -47,8 +47,36 @@ function Scene() {
         myScene.add(directionalLight.target);
         myScene.add(directionalLight);
 
-        //Draw the scene
-        myRenderer.render(myScene, camera);
+        //Keys
+        const keys = {};
+
+        //When a key is pressed handler
+        const handleKeyDown = (event) => {
+            keys[event.key] = true;
+        };
+        const handleKeyUp = (event) => {
+            keys[event.key] = false;
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('keyup', handleKeyUp);
+
+        //Animate
+        let frameId;
+        const animate = () => {
+            // Update cube position based on keys pressed
+            frameId = requestAnimationFrame(animate);
+
+            const speed = 0.1;
+
+            if (keys["ArrowUp"]) cube.position.x -= speed;
+            if (keys["ArrowDown"]) cube.position.x += speed;
+            if (keys["ArrowLeft"]) cube.position.z -= speed;
+            if (keys["ArrowRight"]) cube.position.z += speed;
+            
+            myRenderer.render(myScene, camera);
+        };
+        animate();
 
         // Cleanup function
         return () => {
