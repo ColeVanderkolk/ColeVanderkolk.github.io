@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
-import App from './components/App/app.jsx';
+import App from './components/App/App.jsx';
 import './global.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

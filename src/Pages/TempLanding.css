@@ -129,12 +129,12 @@
 }
 
 .temp-section-card h2 {
-  font-size: large;
+  font-size: x-large;
   margin-bottom: 1rem;
 }
 
-.temp-section-card p {
-  font-size: medium;
+.temp-section-card h3 {
+  font-size: large;
   line-height: 1.6;
 }
 
@@ -142,7 +142,7 @@
     padding-left: 1.5rem; 
     margin-bottom: 1.5rem; 
     line-height: 1.6; 
-    font-size: small;
+    font-size: medium;
 }
 
 /* Fade In / Fade Out Scroll Animation */

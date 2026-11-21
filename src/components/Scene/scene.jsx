@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import './scene.css';
+import './Scene.css';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 

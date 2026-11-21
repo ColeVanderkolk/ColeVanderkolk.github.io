@@ -94,7 +94,7 @@ export default function TempLanding() {
                 <li> Work on physical health: Min of 3 weightlifting sessions a week. Run a sub 25 minute 5k. Prioritize meal planning. </li>
                 <li> Buy a new car </li>
             </ul>
-            <h4>Long Term (5-10 years)</h4>
+            <h3>Long Term (5-10 years)</h3>
             <ul>
                 <li> Become Financially independent </li>
                 <li> Travel to 15 different countries current countries visited: France, Switzerland, Italy, Aruba, Mexico, Canada. Count 6/15 </li>
