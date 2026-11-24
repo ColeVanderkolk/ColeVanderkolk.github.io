@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import TempLanding from '../../pages/TempLanding.jsx';
-import HomePage from '../../pages/HomePage.js';
+import HomePage from '../../pages/HomePage.jsx';
 import './App.css';
 import Header from '../header/Header.jsx';
 

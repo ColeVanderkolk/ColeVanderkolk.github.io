@@ -19,57 +19,11 @@
   min-height: 100vh;
 }
 
-/* Top Navbar */
-.temp-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background-color: rgba(228, 113, 47, 0.92);
-  backdrop-filter: blur(8px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
-  z-index: 1000;
-  border-bottom: 1px solid var(--muted-blush);
-  box-sizing: border-box;
-}
-
-.temp-nav-brand {
-  font-size: x-large;
-  letter-spacing: 1px;
-}
-
-.temp-nav-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.temp-nav-btn {
-  font-family: 'Nasalization', sans-serif;
-  border: none;
-  cursor: pointer;
-  color: var(--dark-text);
-  background-color: var(--muted-blush);
-  padding: 0.55rem 1.1rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  transition: background-color 0.25s ease, transform 0.2s ease;
-}
-
-.temp-nav-btn:hover {
-  background-color: #FFFFFF;
-  transform: translateY(-2px);
-}
-
 /* Top Video Banner */
 .temp-video-banner {
   position: relative;
   width: 100%;
   height: 85vh;
-  margin-top: 70px;
   background-color: var(--slate-blue);
   overflow: hidden;
   display: flex;
@@ -113,10 +67,21 @@
   box-sizing: border-box;
 }
 
-#about { background-color: var(--cream); }
-#goals { background-color: var(--cool-gray); }
-#projects { background-color: var(--muted-blush); }
-#experience { background-color: var(--slate-blue); }
+#about {
+  background-color: var(--cream);
+}
+
+#goals {
+  background-color: var(--cool-gray);
+}
+
+#projects {
+  background-color: var(--muted-blush);
+}
+
+#experience {
+  background-color: var(--slate-blue);
+}
 
 .temp-section-card {
   max-width: 800px;
@@ -138,11 +103,11 @@
   line-height: 1.6;
 }
 
-.temp-section-card ul { 
-    padding-left: 1.5rem; 
-    margin-bottom: 1.5rem; 
-    line-height: 1.6; 
-    font-size: medium;
+.temp-section-card ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: medium;
 }
 
 /* Fade In / Fade Out Scroll Animation */
@@ -164,10 +129,12 @@
     padding: 1rem;
     gap: 0.75rem;
   }
+
   .temp-nav-links {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .temp-video-banner {
     margin-top: 110px;
   }

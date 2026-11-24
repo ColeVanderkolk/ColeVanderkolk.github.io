@@ -30,14 +30,6 @@ export default function TempLanding() {
     return () => observer.disconnect();
   }, []);
 
-  // Using JS scrollTo instead of href="#about" because HashRouter uses '#' for URL routing
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="temp-landing-wrapper">
       {/* Top Navigation Banner */}

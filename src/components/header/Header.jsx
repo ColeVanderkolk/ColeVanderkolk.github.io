@@ -1,37 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { LiquidMetal } from '@paper-design/shaders-react';
 import './Header.css';
 
-function createCutoutDataUrl(text, fontFamily) {
+function createFillDataUrl() {
   const canvas = document.createElement('canvas');
   canvas.width = 1600;
   canvas.height = 180;
   const ctx = canvas.getContext('2d');
-
-  // 1. Fill the entire header bar so the shader renders across the whole background
+  // XXX = the canvas property that sets the fill color; use '#ffffff'
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  // 2. Punch transparent holes in the shape of your name
-  ctx.globalCompositeOperation = 'destination-out';
-  ctx.font = `700 82px "${fontFamily}", sans-serif`;
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillText(text, canvas.width / 2, canvas.height / 2);
-
   return canvas.toDataURL('image/png');
 }
 
 export default function Header() {
   const [bannerMask, setBannerMask] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let isMounted = true;
 
     document.fonts.ready.then(() => {
       if (isMounted) {
-        setBannerMask(createCutoutDataUrl('Cole Vanderkolk', 'Nasalization'));
+        setBannerMask(createFillDataUrl());
       }
     });
 
@@ -40,14 +32,21 @@ export default function Header() {
     };
   }, []);
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="site-header">
-      <Link to="/" className="header-brand-link" aria-label="Cole Vanderkolk Home">
+      <div className="header-bg">
         {bannerMask && (
           <LiquidMetal
             image={bannerMask}
-            colorBack="#00000000"
-            colorTint="#ffffff"
+            colorBack="#ffffff"
+            colorTint="#683d04"
             repetition={3}
             softness={0.1}
             shiftRed={0.35}
@@ -56,12 +55,14 @@ export default function Header() {
             contour={0.5}
             angle={70}
             speed={1}
-            scale={1.5}
+            scale={4}
             fit="cover"
-            style={{ width: '100%', height: '85px', display: 'block' }}
+            style={{ width: '100%', height: '100%', display: 'block' }}
           />
         )}
-      </Link>
+      </div>
+      <div className="header-content">
+        <Link to="/" className="header-name">Cole Vanderkolk</Link>
         <nav className="temp-nav-links">
           <button onClick={() => scrollToSection('about')} className="temp-nav-btn">
             About Me
@@ -76,9 +77,10 @@ export default function Header() {
             Experience
           </button>
           <button onClick={() => navigate('/3d-dev')} className="temp-nav-btn">
-            3D homepage under development         
+            3D homepage under development
           </button>
         </nav>
+      </div>
     </header>
   );
 }

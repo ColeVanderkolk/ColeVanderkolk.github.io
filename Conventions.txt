@@ -50,3 +50,25 @@ REACT & JAVASCRIPT FILE NAMING CONVENTIONS
                   are strict).
 
 ================================================================================
+
+
+Javascript function routine
+function XXX() {                       // XXX = component name (capitalized)
+
+  // ZONE 1: the setup area (everything above the return)
+  // Variables, state, helper functions, useNavigate(), etc.
+  // Anything the buttons/page need to USE gets defined here.
+
+  useEffect(() => {
+    // ZONE 2: a side-job that runs after the page shows up
+    // (like loading fonts). Its own world, separate from zone 1.
+
+    return () => { /* cleanup when leaving */ };   // <- the "other" return
+  }, []);
+
+  return (
+    // ZONE 3: what appears on screen (the HTML-looking part)
+    // Can only USE things from zone 1. It doesn't define them.
+    <div></div>
+  );
+}
