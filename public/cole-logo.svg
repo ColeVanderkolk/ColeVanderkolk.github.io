@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2112" height="704" viewBox="0 0 2112 704" role="img" aria-labelledby="title desc">
+  <title id="title">Cole Vanderkolk</title>
+  <desc id="desc">White NASA worm-inspired lettering on a solid black background.</desc>
+  <rect width="2112" height="704" fill="#000000"/>
+  <text x="1056" y="400"
+        fill="#ffffff"
+        text-anchor="middle"
+        font-family="Inter Display, Inter, Arial, sans-serif"
+        font-size="220"
+        font-weight="700"
+        letter-spacing="-5"
+        textLength="2000"
+        lengthAdjust="spacingAndGlyphs">Cole Vanderkolk</text>
+</svg>

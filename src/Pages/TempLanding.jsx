@@ -41,7 +41,7 @@ export default function TempLanding() {
   return (
     <div className="temp-landing-wrapper">
       {/* Top Navigation Banner */}
-      <header className="temp-navbar">
+      {/* <header className="temp-navbar">
         <div className="temp-nav-brand">Cole Vanderkolk</div>
         <nav className="temp-nav-links">
           <button onClick={() => scrollToSection('about')} className="temp-nav-btn">
@@ -60,7 +60,7 @@ export default function TempLanding() {
             3D homepage under development         
           </button>
         </nav>
-      </header>
+      </header> */}
 
       {/* Looping Video Hero Banner */}
       <section className="temp-video-banner">

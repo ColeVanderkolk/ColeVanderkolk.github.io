@@ -1,0 +1,37 @@
+.site-header {
+  width: 100%;
+  height: 85px;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff; /* Color visible inside the cutout letters */
+  overflow: hidden;
+}
+
+.header-brand-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.temp-nav-links {
+  display: flex;
+  gap: 1rem;
+}
+.temp-nav-btn {
+  font-family: 'Nasalization', sans-serif;
+  border: none;
+  cursor: pointer;
+  color: var(--dark-text);
+  background-color: var(--muted-blush);
+  padding: 0.55rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.temp-nav-btn:hover {
+  background-color: #FFFFFF;
+  transform: translateY(-2px);
+}
