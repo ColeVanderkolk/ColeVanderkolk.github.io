@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import TempLanding from '../../Pages/TempLanding.jsx';
-import HomePage from '../../Pages/HomePage.jsx';
+import TempLanding from '../../pages/TempLanding.jsx';
+import HomePage from '../../pages/HomePage.js';
 import './App.css';
-import Header from '../Header/Header.jsx';
+import Header from '../header/Header.jsx';
 
 export default function App() {
   return (
