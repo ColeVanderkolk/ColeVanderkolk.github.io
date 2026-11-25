@@ -18,7 +18,7 @@
   position: relative;
   width: 100%;
   height: 85vh;
-  background-color: var(--slate-blue);
+  background-color: black;
   overflow: hidden;
   display: flex;
   /* XXX = vertical position: one value that means "bottom" (flex-end or flex-start) */

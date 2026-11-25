@@ -10,7 +10,7 @@ function Scene() {
     useEffect(() => {
 
         const threeJShomepage = sceneReference.current;
-        
+
         //prevent scrolling by adding the no scroll class
         document.body.classList.add("no-scroll");
 
@@ -28,7 +28,7 @@ function Scene() {
 
         //Geometry
         const randomGeoColor = Math.random() * 0xffffff;
-        const cubeGeometry = new THREE.BoxGeometry(1,1,1); //initialize the geometry (shape of object)
+        const cubeGeometry = new THREE.BoxGeometry(1, 1, 1); //initialize the geometry (shape of object)
         const cubeMaterial = new THREE.MeshStandardMaterial({ color: randomGeoColor }); //Initialize the material (give it color)
         const cube = new THREE.Mesh(cubeGeometry, cubeMaterial); //create a object assigning it the values of geometry and material
         myScene.add(cube);
@@ -91,7 +91,7 @@ function Scene() {
             if (keys["ArrowDown"] || keys["s"] || keys["S"]) speed -= acceleration;
             if (keys["ArrowLeft"] || keys["a"] || keys["A"]) cube.rotation.y += turnSpeed;
             if (keys["ArrowRight"] || keys["d"] || keys["D"]) cube.rotation.y -= turnSpeed;
-            
+
             //Speed caps
             if (speed >= maxSpeed) {
                 speed = maxSpeed;
@@ -109,7 +109,7 @@ function Scene() {
                 disco -= 1;
             }
             //Slow cube automatically if no button pressed
-            speed *= 0.97; 
+            speed *= 0.97;
             cube.translateX(speed);
 
             if (keys["-"]) {
@@ -124,20 +124,20 @@ function Scene() {
             camera.position.copy(cube.position.clone().add(new THREE.Vector3(cameraDistX, cameraDistY, 0)));
 
             const tileX = Math.round(cube.position.x / 10) * 10; // round by 10 to find the nearest empty cube in sets of 10
-            const tileZ = Math.round(cube.position.z / 10) * 10; 
+            const tileZ = Math.round(cube.position.z / 10) * 10;
 
-            const key = tileX + "," + tileZ; 
+            const key = tileX + "," + tileZ;
 
             if (!tiles.has(key)) {
-            tiles.add(key);
+                tiles.add(key);
 
-            const tile = new THREE.Mesh(groundGeometry, new THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff }));
-            //position tiile relative to center
-            tile.position.set(tileX , -0.5, tileZ);
-            tile.rotation.x = (-Math.PI / 2);  // same rotation as your first ground
-            myScene.add(tile);
+                const tile = new THREE.Mesh(groundGeometry, new THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff }));
+                //position tiile relative to center
+                tile.position.set(tileX, -0.5, tileZ);
+                tile.rotation.x = (-Math.PI / 2);  // same rotation as your first ground
+                myScene.add(tile);
             }
-             
+
             myRenderer.render(myScene, camera);
         };
         animate();
@@ -155,8 +155,39 @@ function Scene() {
     }, []);
 
     return (
-        <div className="Scene" ref={sceneReference}> Use Arrow or WASD to move :) </div>
+        <main>
+            <div className="Scene" ref={sceneReference}> </div>
+
+            <section id="Controls" className="scene-content">
+                <div className="scene-content-card">
+                    <h2>Controls</h2>
+                    <p> WASD or ARROW keys to move <br />
+                        press the secret button for disco! </p>
+                </div>
+            </section>
+
+            {/* <section id="goals" className="temp-content-section fade-section">
+          <div className="temp-section-card">
+            <h2>Goals</h2>
+            <h3>Short Term (1-2 years)</h3>
+            <ul>
+              <li> Learn piano </li>
+              <li> Write one book. </li>
+              <li> Fully build and deploy one mobile game</li>
+              <li> Begin professional career in the software development industry by Jan 2027 </li>
+              <li> Work on physical health: Min of 3 weightlifting sessions a week. Run a sub 25 minute 5k. Prioritize meal planning. </li>
+              <li> Buy a new car </li>
+            </ul>
+            <h3>Long Term (5-10 years)</h3>
+            <ul>
+              <li> Become Financially independent </li>
+              <li> Travel to 15 different countries current countries visited: France, Switzerland, Italy, Aruba, Mexico, Canada. Count 6/15 </li>
+              <li> Become a published author for Primary series, The Pristines</li>
+            </ul>
+          </div>
+        </section> */}
+        </main>
     );
 }
- 
+
 export default Scene;

@@ -49,7 +49,7 @@ export default function TempLanding() {
       {/* Looping Video Hero Banner */}
       <section className="temp-video-banner">
         {/* Drop your video path inside src="" later */}
-        <video autoPlay muted loop playsInline className="temp-hero-video" src="deep-sea-video.mp4" />
+        <video autoPlay muted loop playsInline className="temp-hero-video" src="" />
         <div
           className={`temp-video-overlay ${loaded ? 'is-visible' : ''}`}
           ref={overlayRef}
