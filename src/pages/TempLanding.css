@@ -6,17 +6,11 @@
 }
 
 .temp-landing-wrapper {
-  --warm-sand: #ff7f11;
-  --slate-blue: #1a5794;
-  --cool-gray: #0a2540;
-  --muted-blush: #ffe8d9;
-  --cream: #ffffff;
-  --dark-text: #2c2a29;
-
   font-family: 'Nasalization', sans-serif;
   background-color: var(--cream);
-  color: var(--dark-text);
+  color: white;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Top Video Banner */
@@ -27,8 +21,12 @@
   background-color: var(--slate-blue);
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* XXX = vertical position: one value that means "bottom" (flex-end or flex-start) */
+  align-items: flex-end;
+  /* YYY = horizontal position: one value that means "left" (flex-end or flex-start) */
+  justify-content: flex-start;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .temp-hero-video {
@@ -42,18 +40,28 @@
 }
 
 .temp-video-overlay {
+  color: white;
   position: relative;
+  opacity: 0;
   z-index: 2;
   text-align: center;
-  background-color: rgba(251, 242, 239, 0.75);
+  background-color: rgba(255, 255, 255, 0);
   padding: 2rem 3rem;
-  border-radius: 12px;
-  border: 1px solid var(--warm-sand);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateX(-100vw);
+  translate: calc(var(--exit, 0) * 120vw) 0;
 }
 
 .temp-video-overlay h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+}
+
+.temp-video-overlay.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  /* put this back, otherwise it never appears */
+  transform: translateX(0);
 }
 
 /* Scroll Sections */
@@ -68,29 +76,29 @@
 }
 
 #about {
-  background-color: var(--cream);
+  background-color: black;
 }
 
 #goals {
-  background-color: var(--cool-gray);
+  background-color: black;
 }
 
 #projects {
-  background-color: var(--muted-blush);
+  background-color: black;
 }
 
 #experience {
-  background-color: var(--slate-blue);
+  background-color: black;
 }
 
 .temp-section-card {
   max-width: 800px;
   width: 100%;
-  background-color: var(--cream);
-  border: 2px solid var(--warm-sand);
+  background-color: rgba(255, 255, 255, 0);
+  border: 10px solid rgba(207, 207, 255, 0);
   padding: 3rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0);
 }
 
 .temp-section-card h2 {
@@ -111,31 +119,13 @@
 }
 
 /* Fade In / Fade Out Scroll Animation */
-.fade-section {
+.fade-section .temp-section-card {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateX(-100vw);
+  transition: opacity 0.7s ease-out, transform 1s ease-out;
 }
 
-.fade-section.is-visible {
+.fade-section.is-visible .temp-section-card {
   opacity: 1;
-  transform: translateY(0);
-}
-
-@media (max-width: 768px) {
-  .temp-navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem;
-    gap: 0.75rem;
-  }
-
-  .temp-nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .temp-video-banner {
-    margin-top: 110px;
-  }
+  transform: translateX(0);
 }

@@ -45,8 +45,8 @@ export default function Header() {
         {bannerMask && (
           <LiquidMetal
             image={bannerMask}
-            colorBack="#ffffff"
-            colorTint="#683d04"
+            colorBack="#ffffff00"
+            colorTint="#c6e4ff"
             repetition={3}
             softness={0.1}
             shiftRed={0.35}

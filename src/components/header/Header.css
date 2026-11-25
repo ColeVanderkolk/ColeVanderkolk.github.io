@@ -2,7 +2,9 @@
   /* YYY = the property that sets a minimum height, instead of a fixed one */
   min-height: 100px;
   height: auto;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   overflow: hidden;
   background-color: #000000;
 }
